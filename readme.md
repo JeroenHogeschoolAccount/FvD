@@ -31,7 +31,7 @@ In zo’n ‘post’ neem je op:
 
 ### Stand van zaken
 
-- Ik ga vandaag beginnen aan opdracht 1, dus voor dit gesprek heb ik nog geen code dat ik kan laten zien. Ik heb wel een storyboard gemaakt, zodat duidelijk wordt wat de bedoeling is wat ik wil gaan maken. -
+- Ik ga vandaag beginnen aan opdracht 1, dus voor dit gesprek heb ik nog geen code dat ik kan laten zien. Ik heb wel een storyboard gemaakt, zodat duidelijk wordt wat ik wil gaan maken. -
 
 <img src="opdracht1/images/FrontendVoorDesigners1.png" width="600px" alt="omschrijving van de pagina">
 
