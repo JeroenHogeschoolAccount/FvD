@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** -Jeroen-
 
 **Het werk:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -26,3 +26,13 @@ In zo’n ‘post’ neem je op:
 - Wat er goed ging
 - Wat er lastig is
 - Wat je plannen zijn
+
+## Voortgang 1 (week 2)
+
+### Stand van zaken
+
+- Ik ga vandaag beginnen aan opdracht 1, dus voor dit gesprek heb ik nog geen code dat ik kan laten zien. Ik heb wel een storyboard gemaakt, zodat duidelijk wordt wat de bedoeling is wat ik wil gaan maken. -
+
+<img src="opdracht1/images/FrontendVoorDesigners1.png" width="600px" alt="omschrijving van de pagina">
+
+<img src="opdracht1/images/FrontendVoorDesigners2.png" width="600px" alt="omschrijving van de pagina">

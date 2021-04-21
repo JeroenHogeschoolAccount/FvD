@@ -17,11 +17,18 @@
 }
 
 body {
-  font-family:eenfont, sans-serif;
+  font-family:myriad pro;
+  font-weight: bold;
   color:#111;
-  background-color:#eee;
+  background-color: var(--kleur1);
+}
+
+:root {
+  --kleurChocopasta: #491D0E;
+  --kleurZwart: #000000;
+  --kleurRood: #DE2619;
+  --kleurAchtergrond: #ededed;
 }
 
 
 /* BRAND STYLING */
-
