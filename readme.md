@@ -9,7 +9,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider-
+1. -https://www.w3schools.com/howto/howto_js_rangeslider.asp-
 2. -bron 2-
 3. -...-
 
