@@ -61,7 +61,9 @@ section:first-of-type {
     max-width: var(--max-width);
     max-height: var(--max-height);
     margin-left: 50%;
-    background: var(--kleurWit);
+    font-size: min(4vw, 1.9em);
+    background-image: linear-gradient(var(--kleurWit) 50%, #ffef91 30em);
+    position: relative;
 }
 
 section:last-of-type {
@@ -75,6 +77,8 @@ section:last-of-type {
     margin-top: 9vw;
     margin-bottom: 6vw;
     background: var(--kleurAchtergrondPhilips);
+    font-size: min(3vw, 1.5em);
+    position: relative;
 }
 
 
@@ -95,12 +99,13 @@ body section:nth-of-type(1) h2:nth-of-type(1) {
 /*Letter N*/
 body section:nth-of-type(1) h2 span:nth-of-type(1) {
     color: var(--kleurZwart);
-    animation: letterNutella 2s 1 alternate, LetterMetChocopasta 7s 1;
+    animation: letterNutellaA 3s 1 alternate, LetterMetChocopastaZwart 7s;
     animation-timing-function: cubic-bezier(0.05, 10, 10, 10);
     display: inline-block;
 }
 
-/*Animatie letters vallen*/
+/*Animatie letters vallen (behalve A)*/
+/*
 @keyframes letterNutella {
 
     0% {
@@ -109,12 +114,12 @@ body section:nth-of-type(1) h2 span:nth-of-type(1) {
     }
 
     50% {
-        transform: translatey(5.9em);
+        transform: translatey(5em);
         animation-timing-function: cubic-bezier(0.895, 0.030, 0.785, 0.220);
     }
 
     65% {
-        transform: translatey(5.9em);
+        transform: translatey(5em);
         animation-timing-function: cubic-bezier(0.895, 0.030, 0.785, 0.220);
     }
 
@@ -122,14 +127,29 @@ body section:nth-of-type(1) h2 span:nth-of-type(1) {
         transform: translatey(0em) scale(1, 5);
     }
 }
+*/
 
 /*Animatie zwarte letter deel met chocopasta*/
-@keyframes LetterMetChocopasta {
-    0% {}
+@keyframes LetterMetChocopastaZwart {
+    0% {
+        background-image: none;
+    }
+
+    10% {
+        background-image:
+            linear-gradient(180deg,
+                black 45% 0%,
+                #491D0E 40% 67%);
+        background-size: 100% 100%;
+        background-clip: text;
+        color: black;
+        -webkit-background-clip: text;
+    }
 
     100% {
-        background-image: linear-gradient(180deg,
-                black 60% 0%,
+        background-image:
+            linear-gradient(180deg,
+                black 45% 0%,
                 #491D0E 40% 67%);
         background-size: 100% 100%;
         background-clip: text;
@@ -165,16 +185,29 @@ body section div#chocopasta {
 /*Letter U*/
 body section:nth-of-type(1) h2 span:nth-of-type(2) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 2s
+    animation-delay: 1s
 }
 
 /*Animatie rode letters deel met chocopasta*/
-@keyframes LetterMetChocopasta2 {
-    0% {}
+@keyframes LetterMetChocopastaRood {
+    0% {
+        background-image: none;
+    }
+
+    10% {
+        background-image:
+            linear-gradient(180deg,
+                #DE2619 45% 0%,
+                #491D0E 40% 67%);
+        background-size: 100% 100%;
+        background-clip: text;
+        color: #DE2619;
+        -webkit-background-clip: text;
+    }
 
     100% {
         background-image:
@@ -190,52 +223,76 @@ body section:nth-of-type(1) h2 span:nth-of-type(2) {
 /*Letter T*/
 body section:nth-of-type(1) h2 span:nth-of-type(3) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 
 /*Letter E*/
 body section:nth-of-type(1) h2 span:nth-of-type(4) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 6s
+    animation-delay: 3s
 }
 
 /*Letter L*/
 body section:nth-of-type(1) h2 span:nth-of-type(5) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.09, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 8s
+    animation-delay: 4s
 }
 
 /*Letter tweede L */
 body section:nth-of-type(1) h2 span:nth-of-type(6) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 10s
+    animation-delay: 5s
 }
 
 /*Letter A*/
 body section:nth-of-type(1) h2 span:nth-of-type(7) {
     color: var(--kleurRood);
-    animation: letterNutella 2s 1, LetterMetChocopasta2 7s 1;
+    animation: letterNutellaA 4s 1, LetterMetChocopastaRood 7s;
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 12s;
+    animation-delay: 6s;
+    position: relative;
 }
+
+/*Animatie letters vallen*/
+@keyframes letterNutellaA {
+
+    0% {
+        transform: translatey(0);
+        animation-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    }
+
+    30% {
+        transform: translatey(4.1em);
+        animation-timing-function: cubic-bezier(0.895, 0.030, 0.785, 0.220);
+    }
+
+    90% {
+        transform: translatey(0em) scale(1, 2.5);
+    }
+
+    100% {
+        transform: translatey(0em) scale(1, 1);
+    }
+}
+
 
 /*Letter A after*/
 /*
@@ -307,32 +364,31 @@ body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
     position: absolute;
     background-color: var(--kleurChocopasta);
     animation: a 20s infinite alternate;
-    animation-delay: 15s;
+    animation-delay: 7s;
+    left: -.17em;
+    top: .6em;
 }
 
 @keyframes a {
     0% {
         clip-path: polygon(90% 30%, 71% 26%, 31% 18%, 22% 28%, 8% 32%, 35% 48%, 46% 73%, 40% 83%, 38% 93%, 50% 92%, 63% 51%, 68% 40%, 84% 44%, 91% 39%);
-        left: 72%;
-        top: 15%;
         width: .9em;
-        height: 1em;
+        height: 1.3em;
+        top: .6em;
     }
 
     50% {
         clip-path: polygon(90% 30%, 71% 26%, 31% 18%, 22% 28%, 8% 32%, 15% 48%, 54% 66%, 67% 81%, 76% 83%, 75% 73%, 63% 57%, 68% 40%, 84% 44%, 91% 39%);
-        left: 72%;
-        top: 13%;
         width: 1.4m;
-        height: 1.5em;
+        height: 1.3em;
+        top: .6em;
     }
 
     100% {
         clip-path: polygon(90% 30%, 71% 26%, 31% 18%, 22% 28%, 8% 32%, 62% 60%, 57% 76%, 53% 93%, 70% 97%, 86% 87%, 78% 62%, 77% 47%, 84% 44%, 88% 46%);
-        left: 72%;
-        top: 15%;
         width: .9em;
-        height: 1em;
+        height: 1.3em;
+        top: .6em;
     }
 }
 
@@ -357,7 +413,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
     margin-top: 0.5em;
     animation: p 2s;
     animation-fill-mode: forwards;
-    /*    text-shadow: 0 -0.08em 0 #cfcfcf;*/
+    /*        text-shadow: 0 -0.08em 0 #cfcfcf;*/
 }
 
 /*Animatie letter P*/
@@ -382,6 +438,8 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
         text-shadow: 0 0 0 #0081C4, 0 0 0.4em #0081C4, 0 0 0.5em #0081C4;
     }
 }
+
+
 
 /*Letter H*/
 body section:nth-of-type(2) h2 span:nth-of-type(2) {
@@ -408,6 +466,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(2) {
     }
 }
 
+
 /*Letter I*/
 body section:nth-of-type(2) h2 span:nth-of-type(3) {
     color: var(--kleurWit);
@@ -415,7 +474,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(3) {
     margin-top: 0.5em;
     animation: i 1s;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1.3s;
     text-shadow:
         /*        0 -0.08em 0 #cfcfcf;*/
 }
@@ -440,7 +499,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(4) {
     margin-top: 0.5em;
     animation: l 1s;
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 1.6s;
     text-shadow:
         /*        0 -0.08em 0  #cfcfcf;*/
 }
@@ -465,7 +524,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(5) {
     margin-top: 0.5em;
     animation: i2 1s;
     animation-fill-mode: forwards;
-    animation-delay: 2.5s;
+    animation-delay: 1.9s;
     text-shadow:
         /*        0 -0.08em 0 #cfcfcf;*/
 }
@@ -490,7 +549,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(6) {
     margin-top: 0.5em;
     animation: p2 1s;
     animation-fill-mode: forwards;
-    animation-delay: 3s;
+    animation-delay: 2.2s;
     text-shadow:
         /*		0 -0.08em 0 #cfcfcf;*/
 }
@@ -514,7 +573,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7) {
     margin-top: 0.5em;
     animation: s 1s;
     animation-fill-mode: forwards;
-    animation-delay: 3.5s;
+    animation-delay: 2.5s;
     text-shadow:
         /*		0 -0.08em 0  #cfcfcf;*/
 }
@@ -540,7 +599,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     letter-spacing: .006em;
     animation: hue 10s;
     animation-fill-mode: forwards;
-    animation-delay: 4s;
+    animation-delay: 3.5s;
     text-shadow: none;
     font-family: NTR, sans-serif;
     margin-top: -.6em;
