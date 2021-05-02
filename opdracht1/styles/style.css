@@ -47,10 +47,18 @@ body {
 }
 
 h1 {
-    margin: 1em;
-    font-family: arial;
+    margin-top: 1em;
+    margin-bottom: -0.1em;
+    font-family: arial, sans-serif;
     font-weight: 900;
     color: var(--kleurWit);
+}
+
+p {
+    font-family: Gloria Hallelujah, sans-serif;
+    color: white;
+    margin-bottom: -3vw;
+    font-size: 10px;
 }
 
 section:first-of-type {
@@ -82,7 +90,6 @@ section:last-of-type {
 
 
 
-
 /* BRAND STYLING - NUTELLA */
 
 /*H2 section 1*/
@@ -95,12 +102,44 @@ body section:nth-of-type(1) h2 {
 
 
 /* LETTERS */
-/*Letter N*/
+/* Letter N + after bedrijf van Nutella met animatie */
 body section:nth-of-type(1) h2 span:nth-of-type(1) {
     color: var(--kleurZwart);
     animation: letterNutellaA 3s 1 alternate, LetterMetChocopastaZwart 7s;
     animation-timing-function: cubic-bezier(0.05, 10, 10, 1);
     display: inline-block;
+    position: relative;
+}
+
+body section:nth-of-type(1) h2 span:nth-of-type(1)::after {
+    content: "FERRERO";
+    display: block;
+    font-family: catamaran, sans-serif;
+    font-size: 23%;
+    position: absolute;
+    top: 54%;
+    animation: bedrijf 2s forwards;
+    animation-delay: 13.5s;
+    color: transparent;
+}
+
+@keyframes bedrijf {
+    0% {
+        color: transparent;
+        letter-spacing: -.7em;
+    }
+
+    30% {
+        /*        color:  #e3bc68;*/
+        color: var(--kleurChocopasta);
+        letter-spacing: 0.1em;
+    }
+
+    100% {
+
+        color: var(--kleurZwart);
+        letter-spacing: 0em;
+    }
 }
 
 /*Letter U*/
@@ -110,7 +149,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(2) {
     animation-timing-function: cubic-bezier(0.05, 0, 0, 1);
     display: inline-block;
     margin-top: 0.5em;
-    animation-delay: 1s
+    animation-delay: 1s;
 }
 
 /*Letter T*/
@@ -185,7 +224,6 @@ body section:nth-of-type(1) h2 span:nth-of-type(7) {
     }
 }
 
-
 /*Animatie rode letters deel met chocopasta*/
 @keyframes LetterMetChocopastaRood {
     0% {
@@ -215,24 +253,25 @@ body section:nth-of-type(1) h2 span:nth-of-type(7) {
 
 
 /*De chocopasta beneden vierkant*/
-body section div#chocopasta {
+body section div:nth-of-type(1) {
     position: absolute;
     width: 100%;
     height: 14%;
     bottom: 0;
-    z-index: 100;
+    z-index: 2;
     background-color: var(--kleurChocopasta);
 }
 
+
 /*De chocopasta beneden om 3D te maken*/
-#chocopasta2 {
-    clip-path: polygon(10% 68%, 10% 68%, 19% 66%, 32% 75%, 45% 69%, 56% 69%, 66% 66%, 79% 75%, 89% 70%, 92% 74%, 100% 99%, -1% 100%);
-    background-color: #593125;
+body section div:nth-of-type(2) {
     position: absolute;
+    clip-path: polygon(10% 68%, 10% 68%, 19% 66%, 32% 75%, 45% 69%, 56% 69%, 66% 66%, 79% 75%, 89% 70%, 92% 74%, 100% 99%, -1% 100%);
     width: 100%;
     height: 16%;
     top: 70.4%;
     z-index: -1;
+    background-color: #593125;
 }
 
 
@@ -245,7 +284,6 @@ body section div#chocopasta {
     }
 
     30% {
-        /*        transform: translatey(4.1em);*/
         transform: translateY(calc(var(--height) * 0.86 - .5em - 1em + .1em + .45em));
         animation-timing-function: cubic-bezier(0.895, 0.030, 0.785, 0.220);
     }
@@ -281,7 +319,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
 
     50% {
         clip-path: polygon(90% 30%, 71% 26%, 31% 18%, 22% 28%, 8% 32%, 15% 48%, 54% 66%, 67% 81%, 76% 83%, 75% 73%, 63% 57%, 68% 40%, 84% 44%, 91% 39%);
-        width: 1.4m;
+/*        width: 1em;*/
         height: 1.3em;
         top: .35em;
     }
@@ -313,7 +351,8 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: p 2s;
+    animation: p 2s, uit 4s;
+    animation-delay: 0s, 15s;
     animation-fill-mode: forwards;
     /*        text-shadow: 0 -0.08em 0 #cfcfcf;*/
 }
@@ -341,16 +380,14 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
     }
 }
 
-
-
 /*Letter H*/
 body section:nth-of-type(2) h2 span:nth-of-type(2) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: h 1s;
+    animation: h 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 1s;
+    animation-delay: 1s, 15s;
     text-shadow:
         /*        0 -0.08em 0 #cfcfcf;*/
 }
@@ -369,14 +406,15 @@ body section:nth-of-type(2) h2 span:nth-of-type(2) {
 }
 
 
+
 /*Letter I*/
 body section:nth-of-type(2) h2 span:nth-of-type(3) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: i 1s;
+    animation: i 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 1.3s;
+    animation-delay: 1.3s, 15s;
     text-shadow:
         /*        0 -0.08em 0 #cfcfcf;*/
 }
@@ -399,9 +437,9 @@ body section:nth-of-type(2) h2 span:nth-of-type(4) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: l 1s;
+    animation: l 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 1.6s;
+    animation-delay: 1.6s, 15s;
     text-shadow:
         /*        0 -0.08em 0  #cfcfcf;*/
 }
@@ -419,14 +457,15 @@ body section:nth-of-type(2) h2 span:nth-of-type(4) {
     }
 }
 
+
 /*Letter tweede I*/
 body section:nth-of-type(2) h2 span:nth-of-type(5) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: i2 1s;
+    animation: i2 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 1.9s;
+    animation-delay: 1.9s, 15s;
     text-shadow:
         /*        0 -0.08em 0 #cfcfcf;*/
 }
@@ -449,9 +488,9 @@ body section:nth-of-type(2) h2 span:nth-of-type(6) {
     color: var(--kleurWit);
     display: inline-block;
     margin-top: 0.5em;
-    animation: p2 1s;
+    animation: p2 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 2.2s;
+    animation-delay: 2.2s, 15s;
     text-shadow:
         /*		0 -0.08em 0 #cfcfcf;*/
 }
@@ -473,9 +512,9 @@ body section:nth-of-type(2) h2 span:nth-of-type(6) {
 body section:nth-of-type(2) h2 span:nth-of-type(7) {
     color: var(--kleurWit);
     margin-top: 0.5em;
-    animation: s 1s;
+    animation: s 1s, uit 4s;
     animation-fill-mode: forwards;
-    animation-delay: 2.5s;
+    animation-delay: 2.5s, 15s;
     text-shadow:
         /*		0 -0.08em 0  #cfcfcf;*/
 }
@@ -492,6 +531,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7) {
         text-shadow: 0 0 0 #FF43E4, 0 0 0.4em #FF43E4, 0 0 0.5em #FF43E4;
     }
 }
+
 
 /* letter S after*/
 body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
@@ -558,6 +598,18 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     }
 }
 
+/*Letters gaan weer uit, maar kleuren op achtergrond blijven */
+@keyframes uit {
+
+    from {
+        color: none;
+    }
+
+    to {
+        color: white;
+    }
+}
+
 /*Vormgeving slider*/
 .slider {
     -webkit-appearance: none;
@@ -589,5 +641,3 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     height: 50px;
     background-color: #0081C4;
 }
-
-
