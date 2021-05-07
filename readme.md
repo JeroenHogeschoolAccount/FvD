@@ -9,9 +9,14 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. https://www.w3schools.com
-2. -bron 2-
-3. -...-
+1. Slider HTML en CSS: https://www.w3schools.com/howto/howto_js_rangeslider.asp
+2. Lettertype: https://fonts.google.com
+3. Annimatie niet laten herhalen: https://stackoverflow.com/questions/17296919/how-to-prevent-css3-animation-reset-when-finished
+3. Animation timing function: https://matthewlein.com/tools/ceaser
+4. Before and after: https://www.youtube.com/watch?v=zGiirUiWslI en https://css-tricks.com/almanac/selectors/a/after-and-before/
+5. Welke lengte gebruiken: https://www.w3schools.com/cssref/css_units.asp
+6. CSS custom properties: https://www.youtube.com/watch?v=PHO6TBq_auI
+
 
 
 
