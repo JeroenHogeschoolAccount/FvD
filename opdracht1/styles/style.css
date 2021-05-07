@@ -61,6 +61,7 @@ p {
     font-size: 10px;
 }
 
+/*Bron font-size: hulp gehad van docent Sanne*/
 section:first-of-type {
     transform: translateX(-50%);
     width: var(--width);
@@ -72,6 +73,7 @@ section:first-of-type {
     position: relative;
 }
 
+/*Bron font-size: hulp gehad van docent Sanne*/
 section:last-of-type {
     transform: translateX(-50%);
     width: var(--width);
@@ -103,6 +105,7 @@ body section:nth-of-type(1) h2 {
 
 /* LETTERS */
 /* Letter N + after bedrijf van Nutella met animatie */
+/* Animation timing function gemaakt met: https://matthewlein.com/tools/ceaser */
 body section:nth-of-type(1) h2 span:nth-of-type(1) {
     color: var(--kleurZwart);
     animation: letterNutellaA 3s 1 alternate, LetterMetChocopastaZwart 7s;
@@ -264,6 +267,7 @@ body section div:nth-of-type(1) {
 
 
 /*De chocopasta beneden om 3D te maken*/
+/*Clip-path gemaakt met: https://bennettfeely.com/clippy/*/
 body section div:nth-of-type(2) {
     position: absolute;
     clip-path: polygon(10% 68%, 10% 68%, 19% 66%, 32% 75%, 45% 69%, 56% 69%, 66% 66%, 79% 75%, 89% 70%, 92% 74%, 100% 99%, -1% 100%);
@@ -276,6 +280,16 @@ body section div:nth-of-type(2) {
 
 
 /*Animatie letters vallen*/
+/*Bron tweede transform: hulp gehad van docent Sanne*/
+
+/* var(--height) is de hoogte van de section */
+/* * 0.86 de witte ruimte - de chocalade is 14% hoog */
+
+/* - .5em - de padding in h2 - de extra ruimte boven de letters */
+
+/* - 1em - de line-height van de letters */
+/* + .1em - de witte onder normale letters in een regel - voor de stok van een p bijvoorbeeld */
+/* + .45em - de hoogte van chocolade in de letter */
 @keyframes letterNutellaA {
 
     0% {
@@ -299,6 +313,7 @@ body section div:nth-of-type(2) {
 
 
 /*Animatie letter A after*/
+/*Clip-path gemaakt met: https://bennettfeely.com/clippy/*/
 body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
     content: "";
     position: absolute;
@@ -319,7 +334,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
 
     50% {
         clip-path: polygon(90% 30%, 71% 26%, 31% 18%, 22% 28%, 8% 32%, 15% 48%, 54% 66%, 67% 81%, 76% 83%, 75% 73%, 63% 57%, 68% 40%, 84% 44%, 91% 39%);
-/*        width: 1em;*/
+        /*        width: 1em;*/
         height: 1.3em;
         top: .35em;
     }
@@ -611,6 +626,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
 }
 
 /*Vormgeving slider*/
+/*
 .slider {
     -webkit-appearance: none;
     width: 12em;
@@ -621,8 +637,10 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     border: solid 2px white;
     border-radius: .7em;
 }
+*/
 
 /*Vormgeving slider knop*/
+/*
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -633,11 +651,49 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     border-radius: 50%;
     transition: .5s;
 }
+*/
 
 /*Vormgeving slider knop ingedrukt*/
+/*
 .slider::-webkit-slider-thumb:active {
     -webkit-appearance: none;
     width: 50px;
     height: 50px;
+    background-color: #0081C4;
+}
+*/
+
+
+
+
+/*Vormgeving slider*/
+.slider {
+    -webkit-appearance: none;
+    width: 20vw;
+    height: 2.5vw;
+    background-image: linear-gradient(89deg,
+            grey 40%,
+            white 80%);
+    border: solid 2px white;
+    border-radius:4vw;
+}
+
+/*Vormgeving slider knop*/
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5vw;
+    height: 5vw;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+/*Vormgeving slider knop ingedrukt*/
+.slider::-webkit-slider-thumb:active {
+    -webkit-appearance: none;
+    width: 6vw;
+    height: 6vw;
     background-color: #0081C4;
 }
