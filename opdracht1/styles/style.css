@@ -23,25 +23,28 @@ body {
     font-weight: bold;
     color: #111;
     text-align: center;
-    background-color: var(--kleurAchtergrondBody);
+    background-image: var(--kleurAchtergrondBody2);
+    /*    background-color: var(--kleurAchtergrondBody);*/
 }
 
 :root {
     --kleurChocopasta: #491D0E;
     --kleurZwart: #000000;
     --kleurRood: #DE2619;
-    --kleurAchtergrond: #ededed;
     --kleurAchtergrondPhilips: #1c1c1c;
     --kleurWit: #fcfcfc;
     --width: 89vh;
     --height: 79vmin;
     --max-width: 85vw;
-    --kleurAchtergrondBody: #ababab;
+    --kleurAchtergrondBody2: linear-gradient(180deg, #ababab, #333333);
+    --marginLeftSection: 50%;
+    /*    --kleurAchtergrondBody: #ababab;*/
+    /*    --kleurAchtergrond: #ededed;*/
 }
 
 @media (prefers-color-scheme:dark) {
     :root {
-        --kleurAchtergrondBody: #333333;
+        --kleurAchtergrondBody2: linear-gradient(180deg, #333333, #333333);
         --kleurWit: #dbdbdb;
     }
 }
@@ -56,30 +59,30 @@ h1 {
 
 p {
     font-family: Gloria Hallelujah, sans-serif;
-    color: white;
+    color: var(--kleurWit);
     margin-bottom: -3vw;
     font-size: 10px;
 }
 
-/*Bron font-size: hulp gehad van docent Sanne*/
+/* Bron font-size: hulp gehad van docent Sanne */
 section:first-of-type {
     transform: translateX(-50%);
     width: var(--width);
     height: var(--height);
     max-width: var(--max-width);
-    margin-left: 50%;
+    margin-left: var(--marginLeftSection);
     font-size: min(4vw, 1.9em);
     background-image: linear-gradient(var(--kleurWit) 50%, #ffef91 30em);
     position: relative;
 }
 
-/*Bron font-size: hulp gehad van docent Sanne*/
+/* Bron font-size: hulp gehad van docent Sanne */
 section:last-of-type {
     transform: translateX(-50%);
     width: var(--width);
     height: var(--height);
     max-width: var(--max-width);
-    margin-left: 50%;
+    margin-left: var(--marginLeftSection);
     margin-top: 9vw;
     margin-bottom: 6vw;
     background: var(--kleurAchtergrondPhilips);
@@ -94,14 +97,13 @@ section:last-of-type {
 
 /* BRAND STYLING - NUTELLA */
 
-/*H2 section 1*/
+/* H2 section 1*/
 body section:nth-of-type(1) h2 {
     font-family: 'heebo', sans-serif;
     letter-spacing: -.04em;
     font-size: 3em;
     line-height: 1em;
 }
-
 
 /* LETTERS */
 /* Letter N + after bedrijf van Nutella met animatie */
@@ -145,7 +147,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(1)::after {
     }
 }
 
-/*Letter U*/
+/* Letter U */
 body section:nth-of-type(1) h2 span:nth-of-type(2) {
     color: var(--kleurRood);
     animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
@@ -155,7 +157,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(2) {
     animation-delay: 1s;
 }
 
-/*Letter T*/
+/* Letter T */
 body section:nth-of-type(1) h2 span:nth-of-type(3) {
     color: var(--kleurRood);
     animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
@@ -164,7 +166,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(3) {
     animation-delay: 2s;
 }
 
-/*Letter E*/
+/* Letter E */
 body section:nth-of-type(1) h2 span:nth-of-type(4) {
     color: var(--kleurRood);
     animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
@@ -173,7 +175,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(4) {
     animation-delay: 3s
 }
 
-/*Letter L*/
+/* Letter L */
 body section:nth-of-type(1) h2 span:nth-of-type(5) {
     color: var(--kleurRood);
     animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
@@ -182,7 +184,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(5) {
     animation-delay: 4s
 }
 
-/*Letter tweede L */
+/* Letter tweede L */
 body section:nth-of-type(1) h2 span:nth-of-type(6) {
     color: var(--kleurRood);
     animation: letterNutellaA 3s 1, LetterMetChocopastaRood 7s;
@@ -191,7 +193,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(6) {
     animation-delay: 5s
 }
 
-/*Letter A*/
+/* Letter A */
 body section:nth-of-type(1) h2 span:nth-of-type(7) {
     color: var(--kleurRood);
     animation: letterNutellaA 4s 1, LetterMetChocopastaRood forwards 7s;
@@ -201,7 +203,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(7) {
     position: relative;
 }
 
-/*Animatie zwarte letter deel met chocopasta*/
+/* Animatie zwarte letter deel met chocopasta */
 @keyframes LetterMetChocopastaZwart {
     0% {
         background-image: none;
@@ -227,7 +229,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(7) {
     }
 }
 
-/*Animatie rode letters deel met chocopasta*/
+/* Animatie rode letters deel met chocopasta */
 @keyframes LetterMetChocopastaRood {
     0% {
         background-image: none;
@@ -254,8 +256,7 @@ body section:nth-of-type(1) h2 span:nth-of-type(7) {
     }
 }
 
-
-/*De chocopasta beneden vierkant*/
+/* De chocopasta beneden vierkant */
 body section div:nth-of-type(1) {
     position: absolute;
     width: 100%;
@@ -265,9 +266,8 @@ body section div:nth-of-type(1) {
     background-color: var(--kleurChocopasta);
 }
 
-
-/*De chocopasta beneden om 3D te maken*/
-/*Clip-path gemaakt met: https://bennettfeely.com/clippy/*/
+/* De chocopasta beneden om 3D te maken */
+/* Clip-path gemaakt met: https://bennettfeely.com/clippy/ */
 body section div:nth-of-type(2) {
     position: absolute;
     clip-path: polygon(10% 68%, 10% 68%, 19% 66%, 32% 75%, 45% 69%, 56% 69%, 66% 66%, 79% 75%, 89% 70%, 92% 74%, 100% 99%, -1% 100%);
@@ -278,9 +278,8 @@ body section div:nth-of-type(2) {
     background-color: #593125;
 }
 
-
-/*Animatie letters vallen*/
-/*Bron tweede transform: hulp gehad van docent Sanne*/
+/* Animatie letters vallen */
+/* Bron tweede transform: hulp gehad van docent Sanne */
 
 /* var(--height) is de hoogte van de section */
 /* * 0.86 de witte ruimte - de chocalade is 14% hoog */
@@ -311,9 +310,8 @@ body section div:nth-of-type(2) {
     }
 }
 
-
-/*Animatie letter A after*/
-/*Clip-path gemaakt met: https://bennettfeely.com/clippy/*/
+/* Animatie letter A after */
+/* Clip-path gemaakt met: https://bennettfeely.com/clippy/ */
 body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
     content: "";
     position: absolute;
@@ -354,14 +352,14 @@ body section:nth-of-type(1) h2 span:nth-of-type(7)::after {
 
 /* BRAND STYLING - PHILIPS */
 
-/*H2 section 2*/
+/* H2 section 2 */
 body section:nth-of-type(2) h2 {
     font-family: 'heebo', sans-serif;
     letter-spacing: -.1em;
     font-size: 5em;
 }
 
-/*Letter P*/
+/* Letter P */
 body section:nth-of-type(2) h2 span:nth-of-type(1) {
     color: var(--kleurWit);
     display: inline-block;
@@ -372,7 +370,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
     /*        text-shadow: 0 -0.08em 0 #cfcfcf;*/
 }
 
-/*Animatie letter P*/
+/* Animatie letter P */
 @keyframes p {
 
     0% {
@@ -395,7 +393,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(1) {
     }
 }
 
-/*Letter H*/
+/* Letter H */
 body section:nth-of-type(2) h2 span:nth-of-type(2) {
     color: var(--kleurWit);
     display: inline-block;
@@ -407,7 +405,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(2) {
         /*        0 -0.08em 0 #cfcfcf;*/
 }
 
-/*Animatie Letter H*/
+/* Animatie Letter H */
 @keyframes h {
 
     0% {
@@ -420,9 +418,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(2) {
     }
 }
 
-
-
-/*Letter I*/
+/* Letter I */
 body section:nth-of-type(2) h2 span:nth-of-type(3) {
     color: var(--kleurWit);
     display: inline-block;
@@ -434,7 +430,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(3) {
         /*        0 -0.08em 0 #cfcfcf;*/
 }
 
-/*Animatie letter I*/
+/* Animatie letter I */
 @keyframes i {
 
     0% {
@@ -447,7 +443,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(3) {
     }
 }
 
-/*Letter L*/
+/* Letter L */
 body section:nth-of-type(2) h2 span:nth-of-type(4) {
     color: var(--kleurWit);
     display: inline-block;
@@ -459,7 +455,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(4) {
         /*        0 -0.08em 0  #cfcfcf;*/
 }
 
-/*Animatie letter L*/
+/* Animatie letter L */
 @keyframes l {
 
     0% {
@@ -472,8 +468,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(4) {
     }
 }
 
-
-/*Letter tweede I*/
+/* Letter tweede I */
 body section:nth-of-type(2) h2 span:nth-of-type(5) {
     color: var(--kleurWit);
     display: inline-block;
@@ -485,7 +480,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(5) {
         /*        0 -0.08em 0 #cfcfcf;*/
 }
 
-/*Animatie letter tweede I*/
+/* Animatie letter tweede I */
 @keyframes i2 {
 
     0% {
@@ -498,7 +493,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(5) {
     }
 }
 
-/*Letter tweede P*/
+/* Letter tweede P */
 body section:nth-of-type(2) h2 span:nth-of-type(6) {
     color: var(--kleurWit);
     display: inline-block;
@@ -510,7 +505,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(6) {
         /*		0 -0.08em 0 #cfcfcf;*/
 }
 
-/*Animatie letter tweede P*/
+/* Animatie letter tweede P */
 @keyframes p2 {
 
     0% {
@@ -523,7 +518,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(6) {
     }
 }
 
-/* letter S*/
+/* letter S */
 body section:nth-of-type(2) h2 span:nth-of-type(7) {
     color: var(--kleurWit);
     margin-top: 0.5em;
@@ -534,7 +529,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7) {
         /*		0 -0.08em 0  #cfcfcf;*/
 }
 
-/*Animatie letter S*/
+/* Animatie letter S */
 @keyframes s {
 
     0% {
@@ -547,8 +542,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7) {
     }
 }
 
-
-/* letter S after*/
+/* letter S after */
 body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     content: "hue";
     display: block;
@@ -561,11 +555,10 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     font-family: NTR, sans-serif;
     margin-top: -.6em;
     font-weight: 100;
-
     /*		0 -0.08em 0  #cfcfcf;*/
 }
 
-/* Animatie letter S after*/
+/* Animatie letter S after */
 @keyframes hue {
     0% {
         background-image: linear-gradient(45deg,
@@ -613,7 +606,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     }
 }
 
-/*Letters gaan weer uit, maar kleuren op achtergrond blijven */
+/* Letters gaan weer uit, maar kleuren op achtergrond blijven */
 @keyframes uit {
 
     from {
@@ -625,7 +618,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     }
 }
 
-/*Vormgeving slider*/
+/* Vormgeving slider oude versie */
 /*
 .slider {
     -webkit-appearance: none;
@@ -664,9 +657,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
 */
 
 
-
-
-/*Vormgeving slider*/
+/* Vormgeving slider nieuwe versie */
 .slider {
     -webkit-appearance: none;
     width: 20vw;
@@ -675,10 +666,10 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
             grey 40%,
             white 80%);
     border: solid 2px white;
-    border-radius:4vw;
+    border-radius: 4vw;
 }
 
-/*Vormgeving slider knop*/
+/* Vormgeving slider knop */
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -690,7 +681,7 @@ body section:nth-of-type(2) h2 span:nth-of-type(7)::after {
     transition: .5s;
 }
 
-/*Vormgeving slider knop ingedrukt*/
+/* Vormgeving slider knop ingedrukt */
 .slider::-webkit-slider-thumb:active {
     -webkit-appearance: none;
     width: 6vw;
