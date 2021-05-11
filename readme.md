@@ -49,3 +49,14 @@ Ik ga vandaag beginnen aan opdracht 1, dus voor dit gesprek heb ik nog geen code
 Deze week begonnen met het schrijven van HTML en CSS. Plan was om deze week zo ver mogelijk te komen met opdracht 1, zodat ik weet waar ik vandaag vragen over moet stellen. Ik vind het lastig de letters en animaties responsive te maken. Op dit moment zijn de animaties alleen juist op één formaat. Verder is het mij nog niet gelukt om een werkende slider te maken. Ook weet ik nog niet zo goed hoe ik "blend-mode" moet gebruiken bij de gekleurde letters. Ik ben al best tevreden met de vormgeving en animaties tot nu toe. Ik hoop dat ik na het gesprek 'de problemen' kan oplossen waar ik nu tegen aan loop. Wanneer ik nog tijd over heb, wil ik proberen extra effecten toe te voegen. 
 
 <img src="opdracht1/images/FrontendVoorDesigners3.png" width="250px" alt="omschrijving van de pagina">
+
+
+## Voortgang 3 (einde van opdracht 1)
+
+### Stand van zaken
+
+Plan was om nieuwe animaties te maken, 'oude' animaties te verbeteren/uit te breiden en responsive te maken. Verder wilde ik de code 'opruimen' en 'de puntjes op de i' zetten. Als ik nog tijd over zou hebben, was het de bedoeling om de slider met JavaScript te maken.
+Het maken van de animaties ging goed, het was vooral erg veel proberen, testen en verbeteren. Uiteindelijk is het gelukt om de animaties responsive te maken met hulp van de docent. Ik had vooral moeite om ervoor te zorgen dat de letters van Nutella altijd 50% in de chocopasta terecht zouden komen. Het gebruik maken van before and after en de custom properties ging goed. Helaas nog niet gelukt om een werkende slider te maken met JavaScript. Verder geleerd om vormpjes te maken met clip-path en deze ook te animeren. De animaties werken soepel in Google Chrome, maar nog niet in Safari.  Ook is het gelukt om geen class en id te gebruiken, dit was met het vak Front-end Development nog best een uitdaging... 
+Het gebruik maken van Google Fonts was nieuw voor mij: erg handig en gemakkelijk.
+
+<img src="opdracht1/images/FrontendVoorDesigners4.png" width="250px" alt="omschrijving van de pagina">
