@@ -69,8 +69,8 @@ Opdracht 2: "In een diverse collectie foto's wil ik kunnen zoeken/sorteren/filte
 
 Idee voor opdracht 2:
 
-<img src="opdracht2/images/FrontendVoorDesigners5.png" width="600px" alt="omschrijving van de pagina">
+<img src="opdracht2/images/FrontendVoorDesigners5.png" width="700px" alt="omschrijving van de pagina">
 
-<img src="opdracht2/images/FrontendVoorDesigners6.png" width="600px" alt="omschrijving van de pagina">
+<img src="opdracht2/images/FrontendVoorDesigners6.png" width="700px" alt="omschrijving van de pagina">
 
-<img src="opdracht2/images/FrontendVoorDesigners7.png" width="250px" alt="omschrijving van de pagina">
+<img src="opdracht2/images/FrontendVoorDesigners7.png" width="300px" alt="omschrijving van de pagina">
