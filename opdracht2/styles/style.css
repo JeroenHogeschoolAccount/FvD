@@ -2,26 +2,250 @@
 
 /* FONTS */
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'eenfont';
+    src: url('../fonts/eenfont.woff2') format('woff2'),
+        url('../fonts/eenfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
 }
 
 
 /* ALGEMENE STYLING */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
 body {
-  font-family:eenfont, sans-serif;
-  color:#111;
-  background-color:#eee;
+    font-family: eenfont, sans-serif;
+    color: #111;
+    background-color: #eee;
 }
 
 
-/* BRAND STYLING */
+
+/* Logo */
+body header section:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    font-family: paytone one, sans-serif;
+    font-size: 30px;
+}
+
+
+
+/* Section zoekbalk*/
+body main section:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2em;
+}
+
+/* Zoekbalk zelf*/
+body main section:nth-of-type(1) input {
+    height: 1.8em;
+    width: 18em;
+    border: none;
+    margin-top: -1em;
+    box-shadow: 0px 2px 3px 0px grey;
+    border-radius: 2em;
+}
+
+/* Bron: https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+/* Zoekbalk placeholder */
+body main section:nth-of-type(1) input::placeholder {
+    padding-left: .7em;
+}
+
+
+
+/* Alle kleurtjes van filteren naast elkaar */
+body main section aside {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Bron: https://stackoverflow.com/questions/4253920/how-do-i-change-the-color-of-radio-buttons*/
+/* Standaard radio buttons*/
+body main section aside input {
+    margin-top: -1em;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/* Radio button 1 - oranje */
+body main section aside input:nth-of-type(1)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #ff5e00;
+    content: '';
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(1):checked::after {
+    height: 2.4em;
+}
+
+
+
+/* Radio button 2 - geel */
+body main section aside input:nth-of-type(2)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #ffbf29;
+    content: '';
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(2):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 3 - groen */
+body main section aside input:nth-of-type(3)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #51b846;
+    content: '';
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(3):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 4 - blauw */
+body main section aside input:nth-of-type(4)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #389fff;
+    content: '';
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(4):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 5 - paars */
+body main section aside input:nth-of-type(5)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background-color: #c642ff;
+    content: '';
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(5):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 6 - rood */
+body main section aside input:nth-of-type(6)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    content: '';
+    background-color: red;
+    display: inline-block;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(6):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 7 - zwart wit */
+body main section aside input:nth-of-type(7)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    background-image: linear-gradient(200deg,
+            black 50%, white 50%);
+    background-size: 100% 100%;
+    color: transparent;
+    background-clip: text;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(7):checked::after {
+    height: 2.4em
+}
+
+
+
+/* Radio button 8 - alle kleuren */
+body main section aside input:nth-of-type(8)::after {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    background-image: linear-gradient(14deg,
+            #ff3333,
+            #ffb833,
+            #1df553,
+            #1deef5,
+            #1d77f5,
+            #ff3333,
+            #ffb833,
+            #1df553,
+            #1deef5,
+            #1d77f5,
+            #ff3333,
+            #ffb833,
+            #1df553);
+    background-size: 200% 200%;
+    color: transparent;
+    background-clip: text;
+    box-shadow: 0px 3px 5px 0px grey;
+    transition: .4s;
+    cursor: pointer;
+}
+
+body main section aside input:nth-of-type(8):checked::after {
+    height: 2.4em;
+}
+
+
 
