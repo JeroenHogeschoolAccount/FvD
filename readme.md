@@ -60,3 +60,17 @@ Het maken van de animaties ging goed, het was vooral erg veel proberen, testen e
 Het gebruik maken van Google Fonts was nieuw voor mij: erg handig en gemakkelijk.
 
 <img src="opdracht1/images/FrontendVoorDesigners4.png" width="250px" alt="omschrijving van de pagina">
+
+## Voortgang 3.5 (begin opdracht 2)
+
+### Stand van zaken
+
+Opdracht 2: "In een diverse collectie foto's wil ik kunnen zoeken/sorteren/filteren op kleur en andere aspecten om verassende zoekresultaten te krijgen die ik kan gebruiken voor mijn visual research."
+
+Idee voor opdracht 2:
+
+<img src="opdracht2/images/FrontendVoorDesigners5.png" width="600px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners6.png" width="600px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners7.png" width="250px" alt="omschrijving van de pagina">
