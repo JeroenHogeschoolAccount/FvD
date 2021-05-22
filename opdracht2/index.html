@@ -11,57 +11,211 @@
     <link href="styles/style.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- Logo -->
     <header>
 
         <section>
-            <p>LOGO</p>
+           <a href="index.html">
+            <p>Zoek&Bewaar</p>
+            </a>
         </section>
 
     </header>
 
 
-    <main>
-        
+    <main id="theList">
+
+        <!-- Zoekbalk -->
         <section>
-                <input type="search" class="search" placeholder="zoeken...">
+            <input type="search" class="search" placeholder="zoeken...">
         </section>
 
+        <!-- Filteren kleur -->
         <section>
             <aside>
-                <input type="radio" name="filter" value="all" id="filter-all" checked>
+                <input type="radio" name="filter" value="oranje" id="filter-oranje">
                 <input type="radio" name="filter" value="geel" id="filter-geel">
                 <input type="radio" name="filter" value="groen" id="filter-groen">
                 <input type="radio" name="filter" value="blauw" id="filter-blauw">
                 <input type="radio" name="filter" value="paars" id="filter-paars">
                 <input type="radio" name="filter" value="rood" id="filter-rood">
                 <input type="radio" name="filter" value="zwartwit" id="filter-zwartwit">
-                <input type="radio" name="filter" value="alles" id="filter-alles">
+                <input type="radio" name="filter" value="alle" id="filter-alle" checked>
             </aside>
         </section>
 
 
+        <!-- Knoppen sorteren en opgeslagen -->
+        <section id=knoppen>
+            <button class="sort" data-sort="afbeelding">Sorteren</button>
+            <button id="opgeslagenKnop">Opgeslagen ❤</button>
+        </section>
 
 
+        <!-- De lijst met alle afbeeldingen -->
+        <ul class="list">
+            <li class="oranje">
+                <p class="afbeelding">Oranje rots met waterval</p>
+                <img src="images/FrontendVoorDesigners8.png">
+                <button>❤</button>
+            </li>
+
+            <li class=blauw>
+                <p class="afbeelding">Bergen met blauwe lucht </p>
+                <img src="images/FrontendVoorDesigners9.png">
+                <button>❤</button>
+            </li>
+
+            <li class=paars>
+                <p class="afbeelding">Bergen met paarse lucht</p>
+                <img src="images/FrontendVoorDesigners10.png">
+                <button>❤</button>
+            </li>
+
+            <li class=groen>
+                <p class="afbeelding">Schapen op het gras</p>
+                <img src="images/FrontendVoorDesigners11.png">
+                <button>❤</button>
+            </li>
+
+            <li class=groen>
+                <p class="afbeelding">Vogel in het bos</p>
+                <img src="images/FrontendVoorDesigners12.png">
+                <button>❤</button>
+            </li>
+
+            <li class=rood>
+                <p class="afbeelding">Framboos</p>
+                <img src="images/FrontendVoorDesigners13.png">
+                <button>❤</button>
+            </li>
+
+            <li class=geel>
+                <p class="afbeelding">Gele bloem</p>
+                <img src="images/FrontendVoorDesigners14.png">
+                <button>❤</button>
+            </li>
+
+            <li class=oranje>
+                <p class="afbeelding">Zonsondergang</p>
+                <img src="images/FrontendVoorDesigners15.png">
+                <button>❤</button>
+            </li>
+
+            <li class=groen>
+                <p class="afbeelding">Bos</p>
+                <img src="images/FrontendVoorDesigners20.png">
+                <button>❤</button>
+            </li>
+
+            <li class=rood>
+                <p class="afbeelding">Rode bloemen</p>
+                <img src="images/FrontendVoorDesigners16.png">
+                <button>❤</button>
+            </li>
+
+            <li class=geel>
+                <p class="afbeelding">Gele bloemen</p>
+                <img src="images/FrontendVoorDesigners17.png">
+                <button>❤</button>
+            </li>
+
+            <li class=blauw>
+                <p class="afbeelding">Bos met sterren</p>
+                <img src="images/FrontendVoorDesigners18.png">
+                <button>❤</button>
+            </li>
+
+            <li class=paars>
+                <p class="afbeelding">Paarse lucht met sterren</p>
+                <img src="images/FrontendVoorDesigners19.png">
+                <button>❤</button>
+            </li>
+
+        </ul>
 
 
+        <!-- Pop-up scherm  -->
+        <div id="vierkant" class="vierkantvormgeving">
 
+            <div class="vierkantinhoud">
 
+                <span class="kruisje">&times;</span>
+
+                <h2>Opgeslagen</h2>
+                <ul class="list" id="list">
+                    <li class=card>
+                        <p class="afbeelding">Rots met waterval en blauwe lucht</p>
+                        <img src="images/FrontendVoorDesigners8.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Bergen met blauwe lucht </p>
+                        <img src="images/FrontendVoorDesigners9.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Bergen met paarse lucht</p>
+                        <img src="images/FrontendVoorDesigners10.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Schapen op het gras</p>
+                        <img src="images/FrontendVoorDesigners11.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Vogel in het bos</p>
+                        <img src="images/FrontendVoorDesigners12.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Framboos</p>
+                        <img src="images/FrontendVoorDesigners13.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Gele bloem</p>
+                        <img src="images/FrontendVoorDesigners14.png">
+                        <button>❤</button>
+                    </li>
+
+                    <li class=card>
+                        <p class="afbeelding">Zonsondergang</p>
+                        <img src="images/FrontendVoorDesigners15.png">
+                        <button>❤</button>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        
 
 
     </main>
 
 
+    <!-- Footer -->
+    <footer>Deze site is gemaakt voor een schoolopdracht - This site is made for a school assignment</footer>
 
 
 
-
-
-
-
-
+    <!-- Javascript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
     <script src="scripts/script.js"></script>
+
+
 </body></html>

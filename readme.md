@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -Jeroen-
+**Auteur:** Jeroen
 
 **Het werk:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -69,8 +69,8 @@ Opdracht 2: "In een diverse collectie foto's wil ik kunnen zoeken/sorteren/filte
 
 Idee voor opdracht 2:
 
-<img src="opdracht2/images/FrontendVoorDesigners5.png" width="700px" alt="omschrijving van de pagina">
+<img src="opdracht2/images/FrontendVoorDesigners5Twee.png" width="700px" alt="omschrijving van de pagina">
 
-<img src="opdracht2/images/FrontendVoorDesigners6.png" width="700px" alt="omschrijving van de pagina">
+<img src="opdracht2/images/FrontendVoorDesigners6Twee.png" width="700px" alt="omschrijving van de pagina">
 
 <img src="opdracht2/images/FrontendVoorDesigners7.png" width="300px" alt="omschrijving van de pagina">
