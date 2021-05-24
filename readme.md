@@ -16,6 +16,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 4. Before and after: https://www.youtube.com/watch?v=zGiirUiWslI en https://css-tricks.com/almanac/selectors/a/after-and-before/
 5. Welke lengte gebruiken: https://www.w3schools.com/cssref/css_units.asp
 6. CSS custom properties: https://www.youtube.com/watch?v=PHO6TBq_auI
+7. Pop-up afbeelding groot: https://www.youtube.com/watch?v=4SQXOA8Z-lo
 
 
 
