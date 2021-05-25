@@ -32,7 +32,7 @@
 
 @media (prefers-color-scheme:dark) {
     :root {
-        --basisKleur:#212121;
+        --basisKleur: #212121;
         --basisKleurPopUp: #a1a1a1;
         --kleurAchtergrondBody: #333333;
         --schaduw1: 0px 2px 3px 0px black;
@@ -43,7 +43,7 @@
     }
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
@@ -86,7 +86,7 @@ body main section:nth-of-type(1) input {
 }
 
 /* Zoekbalk placeholder */
-/* Bron: https://www.w3schools.com/howto/howto_css_placeholder.asp*/
+/* Bron: https://www.w3schools.com/howto/howto_css_placeholder.asp */
 body main section:nth-of-type(1) input::placeholder {
     padding-left: .7em;
 }
@@ -144,7 +144,7 @@ body main section aside input:nth-of-type(2)::after {
 }
 
 body main section aside input:nth-of-type(2):checked::after {
-       height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -163,7 +163,7 @@ body main section aside input:nth-of-type(3)::after {
 }
 
 body main section aside input:nth-of-type(3):checked::after {
-        height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -182,7 +182,7 @@ body main section aside input:nth-of-type(4)::after {
 }
 
 body main section aside input:nth-of-type(4):checked::after {
-        height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -201,7 +201,7 @@ body main section aside input:nth-of-type(5)::after {
 }
 
 body main section aside input:nth-of-type(5):checked::after {
-        height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -220,7 +220,7 @@ body main section aside input:nth-of-type(6)::after {
 }
 
 body main section aside input:nth-of-type(6):checked::after {
-       height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -243,7 +243,7 @@ body main section aside input:nth-of-type(7)::after {
 }
 
 body main section aside input:nth-of-type(7):checked::after {
-        height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -278,7 +278,7 @@ body main section aside input:nth-of-type(8)::after {
 }
 
 body main section aside input:nth-of-type(8):checked::after {
-        height: 2em;
+    height: 2em;
     border-radius: 25%;
 }
 
@@ -303,7 +303,7 @@ li {
 img {
     width: 100%;
     border-radius: 1em;
-    box-shadow: var(--schaduw2); 
+    box-shadow: var(--schaduw2);
 }
 
 /*
@@ -494,6 +494,7 @@ h2 {
 
 
 /* Filteren op kleur - nodig voor JavaScript */
+/* Bron: oefening les sorteren */
 ul.oranje li:not(.oranje) {
     display: none;
 }
@@ -591,8 +592,100 @@ ul.zwartwit li:not(.zwartwit) {
 
 
 
+/* Pop-up afbeelding groot*/
+/* Bron: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
+
+/*
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    margin-right: 1.4em;
+    margin-left: .2em;
+    grid-gap: 1em;
+}
+*/
+
+.img-container {
+    overflow: hidden;
+}
+
+/*
+.img-container img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-out;
+}
+*/
+
+/*
+.img-container img:hover {
+    transform: scale(1.2);
+    border-radius: 20em;
+}
+*/
+
+.modal {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(35px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease-out;
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img {
+    position: absolute;
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.25s ease-out;
+}
+
+.full-img.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal p {
+    color: black;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.kruisjeNep {
+    position: absolute;
+    right: .7em;
+    top: .88em;
+    color: #5a31d6;
+    font-size: 3em;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
 /* Pop-up afbeelding groot */
-.popupAfbeeldingGroot{
+/*
+.popupAfbeeldingGroot {
     position: fixed;
     height: 100%;
     width: 100%;
@@ -605,8 +698,8 @@ ul.zwartwit li:not(.zwartwit) {
     display: none;
 }
 
-.popupAfbeeldingGrootContent{
-    display:flex;
+.popupAfbeeldingGrootContent {
+    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -615,76 +708,9 @@ ul.zwartwit li:not(.zwartwit) {
     margin-right: 2em;
 }
 
-.popupAfbeeldingGrootFoto{
+.popupAfbeeldingGrootFoto {
     width: 100%;
     max-width: 800px;
 }
-
-
-
-
-
-
-/* Bron: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
-.gallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    min-height: 100vh;
-    grid-gap: 2rem;
-}
-
-.img-container{
-    overflow: hidden;
-}
-
-.img-container img{
-    width: 100%;
-    height: 100%;
-        transition:all 0.3s ease-out;
-}
-
-.img-container img:hover{
-  transform: scale(1.2);
-}
-
-.modal{
-    background: rgba(0,0,0,0.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.25s ease-out;
-}
-
-.modal.open{
-    opacity: 1;
-    pointer-events: all;
-}
-
-.full-img{
-    position: absolute;
-    height: 70%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.5);
-    transition: all 0.25s ease-out;
-}
-
-.full-img.open{
-     transform: translate(-50%, -50%) scale(1);
-}
-
-.modal p{
-    color: black;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-}
-
-
+*/
 

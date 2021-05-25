@@ -1,5 +1,3 @@
-
-
 /* ZOEKEN MET ZOEKBALK */
 var options = {
   valueNames: [ 'afbeelding' ]
@@ -14,13 +12,11 @@ charactersList.sort('afbeelding', { order: "asc" });
 
 
 
-/* POP-UP SCHERM */
+/* POP-UP SCHERM OPGESLAGEN */
 var vierkant = document.getElementById("vierkant");
 
-// Button dat het vierkant laat zien
 var button = document.getElementById("opgeslagenKnop");
 
-// kruisje dat de vierkant laat verdwijnen
 var kruisje = document.getElementsByClassName("kruisje")[0];
 
 
@@ -36,17 +32,6 @@ function weg(){
     vierkant.classList.remove ("block");
 }
        
-
-
-//var afbeeldingClick = document.getElementById("foto");
-//
-//afbeeldingClick.addEventListener("click", groot);
-//
-//function groot() {
-//    groot.classList.add ("fullSize");
-//}
-
-
 
 
 /* FILTEREN OP KLEUR */
@@ -80,7 +65,6 @@ optionAlle.addEventListener("change", filteren);
 
 
 
-
 /* AFBEELDING TOEVOEGEN AAN OPGESLAGEN */
 var buttonToevoegen = document.getElementsByClassName("buttonHart");
 var lijstOpgeslagen = document.getElementsByClassName("list2");
@@ -88,24 +72,18 @@ var lijstOpgeslagen = document.getElementsByClassName("list2");
 
 
 /* AFBEELDING GROOT BEKIJKEN */
-//var images = document.querySelectorAll(".images img");
-//var popupAfbeeldingGroot = document.querySelector(".popupAfbeeldingGroot");
-//var popupAfbeeldingGrootFoto = Document.querySelector(".popupAfbeeldingGrootFoto");
-//
-
-
 /* Bron: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
 var modal = document.querySelector(".modal");
-var previews = document.querySelectorAll(".gallery img");
+var previews = document.querySelectorAll(".list img");
 var original = document.querySelector(".full-img");
-var imgText = document.querySelector(".caption");
+//var imgText = document.querySelector(".caption");
 
 previews.forEach(preview => {
     preview.addEventListener('click', () => {
         modal.classList.add("open");
         original.classList.add("open");
         var originalSrc = preview.getAttribute("data-original");
-        orginal.src = originalSrc;
+        original.src = originalSrc;
     });
 });
 
@@ -115,6 +93,7 @@ modal.addEventListener("click", (e) => {
              original.classList.remove("open");
     }
 });
+
 
 
  

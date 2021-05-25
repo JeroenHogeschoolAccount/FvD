@@ -17,6 +17,12 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 5. Welke lengte gebruiken: https://www.w3schools.com/cssref/css_units.asp
 6. CSS custom properties: https://www.youtube.com/watch?v=PHO6TBq_auI
 7. Pop-up afbeelding groot: https://www.youtube.com/watch?v=4SQXOA8Z-lo
+8. Zoekbalk placeholder aanpassen: https://www.w3schools.com/howto/howto_css_placeholder.asp
+9. Radio button aanpassen: https://stackoverflow.com/questions/4253920/how-do-i-change-the-color-of-radio-buttons/38468320
+10. Responsive website: https://www.youtube.com/watch?v=bam83Xv4VMA
+11. CSS flex-flow: https://stackoverflow.com/questions/37226787/align-content-not-working-on-flex-items/52621741
+
+
 
 
 
@@ -75,3 +81,25 @@ Idee voor opdracht 2:
 <img src="opdracht2/images/FrontendVoorDesigners6Twee.png" width="700px" alt="omschrijving van de pagina">
 
 <img src="opdracht2/images/FrontendVoorDesigners7.png" width="300px" alt="omschrijving van de pagina">
+
+## Voortgang 4 (week 7)
+
+### Stand van zaken
+
+Het plan was om aan de slag te gaan met opdracht 2. Ik ben eerst begonnen met de HTML en CSS. Ik had nog niet eerder een responsive website gemaakt, dus ik moest eerst even het een en ander opzoeken hoe dit moest. Ik heb voor de eerste keer gebruik gemaakt van "grid-template-columns" - erg handig. Verder heb ik opgezocht hoe ik de zoekbalk en de radio buttons kan aanpassen. Dit is uiteindelijk gelukt en ik ben tevreden met het resultaat. Precies hoe ik het in gedachte had. Ik heb de kennis van de les en oefeningen toegepast om de zoekbalk en de sorteer-knop werkend te krijgen. 
+Waar ik meer moeite mee had was het werkend krijgen van de filter-knoppen. Dit was wel even lastig, maar met hulp van de uitwerkingen van een van de oefeningen is het uiteindelijk gelukt. 
+Hierna ben ik aan de slag gegaan met het pop-up scherm voor het vergroten van een afbeelding. Ik heb dit eerst zelf geprobeerd, maar zonder succes. Na veel YouTube video's bekeken te hebben kwam ik bij een video terecht met een uitleg waar ik precies naar opzoek was: pop-up scherm met nette JavaScript en waar gelijk uitgelegd werd hoe je gebruik kan maken van twee verschillende afbeeldingen. Één met meer MB dan de andere. Hierdoor laden de afbeeldingen sneller en wordt pas de afbeelding met veel MB geladen wanneer de gebruiker de afbeelding vergroot wil bekijken. Ik heb de JavaScript van de video overgenomen om te kijken hoe en of het goed werkt. Helaas werkte de pop-up bij mij nog niet. Ik heb uren gezocht waar de fout zat, maar kon het niet vinden. Ik had wel een vermoeden waar de fout zat... Uiteindelijk maar om hulp gevraagd - de docent heeft de fout gevonden: een spelfoutje. 
+Het is nu de bedoeling om aan de slag te gaan met het kunnen toevoegen van afbeeldingen aan de favorieten lijst. Ik denk dat dit erg lastig gaat worden en ga vandaag tijdens het gesprek vragen hoe ik precies moet beginnen en waar ik eventueel een goed voorbeeld kan vinden. Het is namelijk ook de bedoeling dat de "opgeslagen" knop eerst grijs is. Pas wanneer de gebruiker een afbeelding toevoegd aan de lijst, moet deze knop wit worden. De knop met het hartje bij de desbetreffende afbeelding moet dan ook rood zijn geworden. Wanneer dit is gelukt kan ik nog extra animaties toevoegen zoals een effect wanneer de afbeelding met succes is toegevoegd. Maar ik ga ervan uit dat ik voorlopig nog wel zoet ben met het 'gewoon' basic toevoegen van een afbeelding aan de lijst - en deze ook weer uit de lijst kunnen verwijderen. 
+Ik heb tot nu toe al veel geleerd van opdracht 2, want ik had hiervoor amper kennis van JavaScript en het responsive maken van een website.  
+
+<img src="opdracht2/images/FrontendVoorDesigners21.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners22.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners23.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners24.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners25.png" width="300px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners26.png" width="200px" alt="omschrijving van de pagina">
