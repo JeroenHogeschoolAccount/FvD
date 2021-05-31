@@ -1,6 +1,6 @@
 /* ZOEKEN MET ZOEKBALK */
 var options = {
-  valueNames: [ 'afbeelding' ]
+    valueNames: ['afbeelding']
 };
 
 var charactersList = new List('theList', options);
@@ -8,7 +8,9 @@ var charactersList = new List('theList', options);
 
 
 /* ZOEKEN MET SORTEREN */
-charactersList.sort('afbeelding', { order: "asc" });
+charactersList.sort('afbeelding', {
+    order: "asc"
+});
 
 
 
@@ -20,18 +22,18 @@ var button = document.getElementById("opgeslagenKnop");
 var kruisje = document.getElementsByClassName("kruisje")[0];
 
 
-button.addEventListener("click", zien); 
+button.addEventListener("click", zien);
 
 function zien() {
-    vierkant.classList.add ("block");
+    vierkant.classList.add("block");
 }
 
-kruisje.addEventListener("click", weg); 
+kruisje.addEventListener("click", weg);
 
-function weg(){
-    vierkant.classList.remove ("block");
+function weg() {
+    vierkant.classList.remove("block");
 }
-       
+
 
 
 /* FILTEREN OP KLEUR */
@@ -45,13 +47,13 @@ var optionZwartwit = document.querySelector("#filter-zwartwit");
 var optionAlle = document.querySelector("#filter-alle");
 
 
-function filteren(event){
-  var lijst = document.querySelector("ul");
-  var filterMetKleurtje = event.target.value;
+function filteren(event) {
+    var lijst = document.querySelector("ul");
+    var filterMetKleurtje = event.target.value;
 
-  lijst.className = "";
+    lijst.className = "";
 
-  lijst.classList.add(filterMetKleurtje);
+    lijst.classList.add(filterMetKleurtje);
 }
 
 optionOranje.addEventListener("change", filteren);
@@ -62,6 +64,7 @@ optionPaars.addEventListener("change", filteren);
 optionRood.addEventListener("change", filteren);
 optionZwartwit.addEventListener("change", filteren);
 optionAlle.addEventListener("change", filteren);
+
 
 
 
@@ -88,12 +91,78 @@ previews.forEach(preview => {
 });
 
 modal.addEventListener("click", (e) => {
-    if(e.target.classList.contains("modal")) {
+    if (e.target.classList.contains("modal")) {
         modal.classList.remove("open");
-             original.classList.remove("open");
+        original.classList.remove("open");
     }
 });
 
 
 
- 
+/* POP-UP AFSLUITEN MET TOETS */
+/* Bron hulp: https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery */
+document.addEventListener('keydown', function (e) {
+    if (e.keyCode == 27) {
+        vierkant.classList.remove("block");
+        modal.classList.remove("open");
+        original.classList.remove("open");
+    }
+});
+
+
+/* OPGESLAGEN LIJST OPENEN MET TOETS OMHOOG */
+document.addEventListener('keydown', function (e) {
+    if (e.keyCode == 38) {
+   vierkant.classList.add("block");
+    }
+});
+
+
+
+
+/* Wanneer de afbeelding met de oranje rots wordt opgeslagen, wordt er een woord toegevoegd aan de lijst met opgeslagen */ 
+var deOpgeslagenLi = document.getElementById("testLi");
+var hartjeKnop = document.getElementById("hartjeKnopTest");
+var opgeslagenLijst = document.getElementById("list");
+
+
+hartjeKnop.addEventListener("click", toevoegen);
+
+function toevoegen() {
+    opgeslagenLijst.appendChild(document.createTextNode("Afbeelding Test"));
+    opgeslagenLijst.appendChild(li);
+}
+
+
+
+/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots  */ 
+var hartjeKnop = document.getElementById("hartjeKnopTest");
+opgeslagenKnop = document.getElementById("opgeslagenKnop")
+
+hartjeKnop.addEventListener("click", animatie);
+
+function animatie() {
+    opgeslagenKnop.classList.add("jaa");
+    hartjeKnop.classList.add("toegevoegd");
+}
+
+
+
+
+
+
+
+//
+//
+//var hartjeKnop = document.getElementsByClassName("buttonHart");
+//opgeslagenKnop = document.getElementById("opgeslagenKnop")
+//
+//hartjeKnop.addEventListener("click", rood);
+//
+//function rood() {
+//    opgeslagenKnop.classList.add("jaa");
+//    hartjeKnop.classList.add("buttonHartToegevoegd");
+//}
+
+
+

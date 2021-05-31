@@ -293,6 +293,13 @@ body main section aside input:nth-of-type(8):checked::after {
     grid-gap: 1em;
 }
 
+@media screen and (max-width: 374px) {
+    .list {
+        margin-right: 1.4em;
+        margin-left: -1.4em;
+    }
+}
+
 li {
     list-style: none;
     position: relative;
@@ -380,8 +387,40 @@ footer {
     border-radius: 1em;
     box-shadow: var(--schaduw3);
     border: none;
-    background-color: grey;
+    background-color: white;
+    display: block;
+    cursor: pointer;
 }
+
+.jaa {
+    width: 9em;
+    height: 2.5em;
+    border-radius: 1em;
+    box-shadow: var(--schaduw3);
+    border: none;
+    background-color: grey;
+    animation: opgeslagenKnop 3s;
+    display: block;
+    animation-iteration-count: 1;
+}
+
+@keyframes opgeslagenKnop {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: white;
+        background-color: #6c3bff;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+
+
 
 /* Knop voor sorteren */
 .sort {
@@ -439,6 +478,59 @@ body ul li button {
     border: none;
 }
 
+body ul li button.toegevoegd {
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    left: 87%;
+    top: 77%;
+    padding-top: .1em;
+    text-align: center;
+    color: red;
+    background-color: var(--basisKleur);
+    font-size: 20px;
+    border-radius: .5em .5em .5em .5em;
+    box-shadow: 0px 2px 7px 0px black;
+    border: none;
+    display: block;
+}
+
+
+/* TEST TEST TEST KNOP*/
+
+.buttonHart {
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    left: 87%;
+    top: 77%;
+    padding-top: .1em;
+    text-align: center;
+    color: white;
+    background-color: var(--basisKleur);
+    font-size: 20px;
+    border-radius: .5em .5em .5em .5em;
+    box-shadow: 0px 2px 7px 0px black;
+    border: none;
+}
+
+.buttonHartToegevoegd {
+    position: absolute;
+    width: 1.9em;
+    height: 1.9em;
+    left: 87%;
+    top: 77%;
+    padding-top: .1em;
+    text-align: center;
+    color: red;
+    background-color: var(--basisKleur);
+    font-size: 20px;
+    border-radius: .5em .5em .5em .5em;
+    box-shadow: 0px 2px 7px 0px black;
+    border: none;
+    display: block;
+}
+
 
 /* Pop-up scherm opgeslagen */
 .vierkantvormgeving {
@@ -460,6 +552,14 @@ body ul li button {
     margin-right: 1.4em;
     margin-left: .2em;
     grid-gap: 1em;
+}
+
+
+@media screen and (max-width: 374px) {
+    .list2 {
+        margin-right: 1.4em;
+        margin-left: -1.92em;
+    }
 }
 
 /* Kruisje om pop-up scherm te sluiten */
@@ -680,6 +780,31 @@ ul.zwartwit li:not(.zwartwit) {
 
 
 
+/* knop opslaan bij afbeelding */
+
+.buttonhart {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
 
 
 
@@ -713,4 +838,3 @@ ul.zwartwit li:not(.zwartwit) {
     max-width: 800px;
 }
 */
-

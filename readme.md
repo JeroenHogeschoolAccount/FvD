@@ -21,6 +21,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 9. Radio button aanpassen: https://stackoverflow.com/questions/4253920/how-do-i-change-the-color-of-radio-buttons/38468320
 10. Responsive website: https://www.youtube.com/watch?v=bam83Xv4VMA
 11. CSS flex-flow: https://stackoverflow.com/questions/37226787/align-content-not-working-on-flex-items/52621741
+12. Wat (e) doet in JavaScript: https://stackoverflow.com/questions/10323392/in-javascript-jquery-what-does-e-mean
+
 
 
 
