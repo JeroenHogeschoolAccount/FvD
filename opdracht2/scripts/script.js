@@ -122,15 +122,21 @@ document.addEventListener('keydown', function (e) {
 
 /* Wanneer de afbeelding met de oranje rots wordt opgeslagen, wordt er een woord toegevoegd aan de lijst met opgeslagen */ 
 var deOpgeslagenLi = document.getElementById("testLi");
-var hartjeKnop = document.getElementById("hartjeKnopTest");
+//var hartjeKnop = document.getElementById("hartjeKnopTest");
 var opgeslagenLijst = document.getElementById("list");
+var alleHartjeKnoppen = document.querySelectorAll("ul.list button.buttonHart");
 
+alleHartjeKnoppen.forEach(function(hartjeKnop) {
+   hartjeKnop.addEventListener("click", toevoegen); 
+} );
 
-hartjeKnop.addEventListener("click", toevoegen);
-
-function toevoegen() {
-    opgeslagenLijst.appendChild(document.createTextNode("Afbeelding Test"));
-    opgeslagenLijst.appendChild(li);
+function toevoegen(event) {
+    var itm = event.target.closest("li");
+    var cln = itm.cloneNode(true);
+    var clnButton = cln.querySelector("button");
+    console.log(clnButton);
+    clnButton.classList.add("toegevoegd");
+    opgeslagenLijst.appendChild(cln);
 }
 
 
@@ -145,9 +151,6 @@ function animatie() {
     opgeslagenKnop.classList.add("jaa");
     hartjeKnop.classList.add("toegevoegd");
 }
-
-
-
 
 
 
