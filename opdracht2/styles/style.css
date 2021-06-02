@@ -493,7 +493,10 @@ body ul li button.toegevoegd {
     box-shadow: 0px 2px 7px 0px black;
     border: none;
     display: block;
+    transition: 1s;
 }
+
+
 
 
 /* TEST TEST TEST KNOP*/

@@ -113,22 +113,22 @@ document.addEventListener('keydown', function (e) {
 /* OPGESLAGEN LIJST OPENEN MET TOETS OMHOOG */
 document.addEventListener('keydown', function (e) {
     if (e.keyCode == 38) {
-   vierkant.classList.add("block");
+        vierkant.classList.add("block");
     }
 });
 
 
 
 
-/* Wanneer de afbeelding met de oranje rots wordt opgeslagen, wordt er een woord toegevoegd aan de lijst met opgeslagen */ 
+/* AFBEELDING WORDT TOEGEVOEGD AAN LIJST MET FAVORIETEN*/
 var deOpgeslagenLi = document.getElementById("testLi");
 //var hartjeKnop = document.getElementById("hartjeKnopTest");
 var opgeslagenLijst = document.getElementById("list");
 var alleHartjeKnoppen = document.querySelectorAll("ul.list button.buttonHart");
 
-alleHartjeKnoppen.forEach(function(hartjeKnop) {
-   hartjeKnop.addEventListener("click", toevoegen); 
-} );
+alleHartjeKnoppen.forEach(function (hartjeKnop) {
+    hartjeKnop.addEventListener("click", toevoegen);
+});
 
 function toevoegen(event) {
     var itm = event.target.closest("li");
@@ -141,7 +141,26 @@ function toevoegen(event) {
 
 
 
-/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots  */ 
+
+
+//
+//
+//
+///* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie van gesprek  */
+//var hartjeKnop = document.getElementById("hartjeKnopTest");
+//opgeslagenKnop = document.getElementById("opgeslagenKnop")
+//
+//hartjeKnop.addEventListener("click", animatie);
+//
+//function animatie() {
+//    console.log(this)
+//    opgeslagenKnop.classList.add("jaa");
+//    this.classList.add("toegevoegd");
+//}
+
+
+
+/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie voor gesprek  */ 
 var hartjeKnop = document.getElementById("hartjeKnopTest");
 opgeslagenKnop = document.getElementById("opgeslagenKnop")
 
@@ -153,8 +172,7 @@ function animatie() {
 }
 
 
-
-
+/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie met class - werkt niet  */ 
 //
 //
 //var hartjeKnop = document.getElementsByClassName("buttonHart");
@@ -166,6 +184,72 @@ function animatie() {
 //    opgeslagenKnop.classList.add("jaa");
 //    hartjeKnop.classList.add("buttonHartToegevoegd");
 //}
+
+
+
+
+
+
+/* Bron: stukje JavaScript bekeken/gebruikt van Muhammet */
+var favorietKnop2 = document.querySelector(
+    ".list li:nth-child(2) .buttonHart"
+);
+
+favorietKnop2.addEventListener("click", favorietOpslaan2);
+
+function favorietOpslaan2() {
+    if (favorietKnop2.classList.contains("test")) {
+        favorietKnop2.classList.remove("test");
+        favorietKnop2.style.color = "red";
+        opgeslagenKnop.classList.add("jaa");
+
+    } else {
+        favorietKnop2.classList.add("test");
+        favorietKnop2.style.color = "white";
+        //            opgeslagenLijst.remove("itm");
+    }
+}
+
+
+
+var favorietKnop3 = document.querySelector(
+    ".list li:nth-child(3) .buttonHart"
+);
+
+favorietKnop3.addEventListener("click", favorietOpslaan3);
+
+function favorietOpslaan3() {
+    if (favorietKnop3.classList.contains("test")) {
+        favorietKnop3.classList.remove("test");
+        favorietKnop3.style.color = "red";
+        opgeslagenKnop.classList.add("jaa");
+
+    } else {
+        favorietKnop3.classList.add("test");
+        favorietKnop3.style.color = "white";
+    }
+}
+
+
+
+var favorietKnop4 = document.querySelector(
+    ".list li:nth-child(4) .buttonHart"
+);
+
+favorietKnop4.addEventListener("click", favorietOpslaan4);
+
+function favorietOpslaan4() {
+    if (favorietKnop4.classList.contains("test")) {
+        favorietKnop4.classList.remove("test");
+        favorietKnop4.style.color = "red";
+        opgeslagenKnop.classList.add("jaa");
+
+    } else {
+        favorietKnop4.classList.add("test");
+        favorietKnop4.style.color = "white";
+    }
+}
+
 
 
 
