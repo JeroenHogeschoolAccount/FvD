@@ -381,7 +381,7 @@ footer {
 
 /* Knop voor pop-up opgeslagen afbeedlingen - grijs */
 #opgeslagenKnop {
-/*    width: 9em;*/
+    /*    width: 9em;*/
     height: 2.5em;
     border-radius: 1em;
     box-shadow: var(--schaduw3);
@@ -394,7 +394,7 @@ footer {
     z-index: 0;
 }
 
-#opgeslagenKnop span{
+#opgeslagenKnop span {
     display: inline-block;
     position: relative;
     width: 1em;
@@ -403,7 +403,7 @@ footer {
     color: white;
 }
 
-#opgeslagenKnop span::before{
+#opgeslagenKnop span::before {
     content: "❤";
     position: absolute;
     font-size: 2.5em;
@@ -500,7 +500,7 @@ body ul li button {
     border-radius: .5em .5em .5em .5em;
     box-shadow: 0px 2px 7px 0px black;
     border: none;
-        transition: 1s;
+    transition: 1s;
 }
 
 body ul li.toegevoegd button {
@@ -577,6 +577,7 @@ body ul li.toegevoegd button {
 }
 
 /* Kruisje om pop-up scherm te sluiten */
+/*
 span.kruisje{
     position: absolute;
     right: .7em;
@@ -589,6 +590,7 @@ span.kruisje{
 span.kruisje:hover{
     color: #5a31d6;
 }
+*/
 
 /* Titel pop-up scherm */
 h2 {
@@ -749,6 +751,7 @@ ul.zwartwit li:not(.zwartwit) {
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease-out;
+    display:block;
 }
 
 .modal.open {
@@ -852,3 +855,36 @@ body {
     max-width: 800px;
 }
 */
+
+
+
+/* Kruisje pop-up scherm verwijderen */
+.sluiten {
+    position: absolute;
+    opacity: 1;
+    background-color: transparent;
+    border: none;
+    font-size: 3em;
+    cursor: pointer;
+    right: .6em;
+    top: 1.4em;
+}
+
+.sluiten:before,
+.sluiten:after {
+    position: absolute;
+    content: '';
+    height: .5em;
+    width:5px;
+    background-color: #6c3bff;
+    border-radius: 2em;
+    
+}
+
+.sluiten:before {
+    transform: rotate(45deg);
+}
+
+.sluiten:after {
+    transform: rotate(-45deg);
+}

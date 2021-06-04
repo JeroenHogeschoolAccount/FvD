@@ -19,7 +19,7 @@ var vierkant = document.getElementById("vierkant");
 
 var button = document.getElementById("opgeslagenKnop");
 
-var kruisje = document.getElementsByClassName("kruisje")[0];
+var kruisje = document.getElementsByClassName("sluiten")[0];
 
 
 button.addEventListener("click", zien);
@@ -98,6 +98,17 @@ modal.addEventListener("click", (e) => {
 });
 
 
+var sluit = document.querySelector(".modal button.sluiten");
+
+sluit.addEventListener("click", doeiGroteAfbeelding);
+
+function doeiGroteAfbeelding() {
+    modal.classList.remove("open");
+    original.classList.remove("open");
+}
+
+
+
 
 /* POP-UP AFSLUITEN MET TOETS */
 /* Bron hulp: https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery */
@@ -131,72 +142,72 @@ alleHartjeKnoppen.forEach(function (hartjeKnop) {
 });
 
 function toggleFavoriet(event) {
-//    check of die foto favoriet is
-       var foto = event.target.closest("li");
-       if(foto.classList.contains("toegevoegd")) { 
+    //    check of die foto favoriet is
+    var foto = event.target.closest("li");
+    if (foto.classList.contains("toegevoegd")) {
         favorietVerwijderen(foto);
-       } else {
+    } else {
         favorietToevoegen(foto);
-       }
-//    als favoriet verwijderen
-//    als niet favoriet toevoegen
+    }
+    //    als favoriet verwijderen
+    //    als niet favoriet toevoegen
 }
 
 function favorietToevoegen(foto) {
-//    console.log(clnButton);
-//   foto opzoeken 
-//   class toevoegen aan de foto
+    //    console.log(clnButton);
+    //   foto opzoeken 
+    //   class toevoegen aan de foto
     foto.classList.add("toegevoegd");
-//   met css hartje rood maken
-//   foto clone
-        var fotoClone = foto.cloneNode(true);
+    //   met css hartje rood maken
+    //   foto clone
+    var fotoClone = foto.cloneNode(true);
     var fotoCloneButton = fotoClone.querySelector("button");
     fotoCloneButton.addEventListener("click", favorietVerwijderenInFavorietenlijst);
-//   clone toevoegen aan lijst met favorieten
+    //   clone toevoegen aan lijst met favorieten
     opgeslagenLijst.appendChild(fotoClone);
-//    teller +1
+    //    teller +1
     var tellerKnop = document.querySelector("#opgeslagenKnop span");
     var tellerTitel = document.querySelector("#vierkant h2 span");
     var huidigeAantal = tellerKnop.textContent;
     var nieuweAantal = parseInt(huidigeAantal) + 1;
     tellerKnop.textContent = nieuweAantal;
-        tellerTitel.textContent = nieuweAantal;
+    tellerTitel.textContent = nieuweAantal;
 }
 
-function favorietVerwijderen (foto) {
-//    foto opzoeken 
-//    de class weghalen 
-        foto.classList.remove("toegevoegd");
-//    de foto opzoeken in de lijst met favorieten 
+function favorietVerwijderen(foto) {
+    //    foto opzoeken 
+    //    de class weghalen 
+    foto.classList.remove("toegevoegd");
+    //    de foto opzoeken in de lijst met favorieten 
     var fotoId = foto.dataset.id;
-    var fotoInFavorietenLijst = document.querySelector("ul.list2 li[data-id='"+fotoId+"']");
-//    foto weghalen uit de lijst
+    var fotoInFavorietenLijst = document.querySelector("ul.list2 li[data-id='" + fotoId + "']");
+    //    foto weghalen uit de lijst
     fotoInFavorietenLijst.remove();
-//    teller -1
-        var tellerKnop = document.querySelector("#opgeslagenKnop span");
-        var tellerTitel = document.querySelector("#vierkant h2 span");
+    //    teller -1
+    var tellerKnop = document.querySelector("#opgeslagenKnop span");
+    var tellerTitel = document.querySelector("#vierkant h2 span");
     var huidigeAantal = tellerKnop.textContent;
     var nieuweAantal = parseInt(huidigeAantal) - 1;
     tellerKnop.textContent = nieuweAantal;
-            tellerTitel.textContent = nieuweAantal;
+    tellerTitel.textContent = nieuweAantal;
 }
 
 function favorietVerwijderenInFavorietenlijst(event) {
-//    foto opzoeken
-         var fotoInFavorietenLijst = event.target.closest("li");
-//    class weg uit normale lijst 
-        var fotoId = fotoInFavorietenLijst.dataset.id;
-         var fotoInNormaleLijst = document.querySelector("ul.list li[data-id='"+fotoId+"']");
+    //    foto opzoeken
+    var fotoInFavorietenLijst = event.target.closest("li");
+    //    class weg uit normale lijst 
+    var fotoId = fotoInFavorietenLijst.dataset.id;
+    var fotoInNormaleLijst = document.querySelector("ul.list li[data-id='" + fotoId + "']");
     fotoInNormaleLijst.classList.remove("toegevoegd");
-//    foto weg uit favorietenlijst
-        fotoInFavorietenLijst.remove();
-//    teller -1
-        var tellerKnop = document.querySelector("#opgeslagenKnop span");
-        var tellerTitel = document.querySelector("#vierkant h2 span");
+    //    foto weg uit favorietenlijst
+    fotoInFavorietenLijst.remove();
+    //    teller -1
+    var tellerKnop = document.querySelector("#opgeslagenKnop span");
+    var tellerTitel = document.querySelector("#vierkant h2 span");
     var huidigeAantal = tellerKnop.textContent;
     var nieuweAantal = parseInt(huidigeAantal) - 1;
     tellerKnop.textContent = nieuweAantal;
-            tellerTitel.textContent = nieuweAantal;
+    tellerTitel.textContent = nieuweAantal;
 }
 //
 //
@@ -215,7 +226,7 @@ function favorietVerwijderenInFavorietenlijst(event) {
 
 
 
-/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie voor gesprek  */ 
+/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie voor gesprek  */
 var hartjeKnop = document.getElementById("hartjeKnopTest");
 opgeslagenKnop = document.getElementById("opgeslagenKnop")
 
@@ -227,7 +238,7 @@ function animatie() {
 }
 
 
-/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie met class - werkt niet  */ 
+/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie met class - werkt niet  */
 //
 //
 //var hartjeKnop = document.getElementsByClassName("buttonHart");
@@ -239,11 +250,3 @@ function animatie() {
 //    opgeslagenKnop.classList.add("jaa");
 //    hartjeKnop.classList.add("buttonHartToegevoegd");
 //}
-
-
-
-
-
-
-
-
