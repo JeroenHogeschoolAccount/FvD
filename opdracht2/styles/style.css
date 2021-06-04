@@ -377,20 +377,44 @@ footer {
     margin-right: 2em;
     margin-left: 2em;
     margin-top: 1em;
-
 }
 
 /* Knop voor pop-up opgeslagen afbeedlingen - grijs */
 #opgeslagenKnop {
-    width: 9em;
+/*    width: 9em;*/
     height: 2.5em;
     border-radius: 1em;
     box-shadow: var(--schaduw3);
     border: none;
     background-color: white;
-    display: block;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+    position: relative;
+    z-index: 0;
 }
+
+#opgeslagenKnop span{
+    display: inline-block;
+    position: relative;
+    width: 1em;
+    margin-left: .75em;
+    margin-right: .75em;
+    color: white;
+}
+
+#opgeslagenKnop span::before{
+    content: "❤";
+    position: absolute;
+    font-size: 2.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    z-index: -1;
+}
+
+
 
 .jaa {
     width: 9em;
@@ -476,24 +500,11 @@ body ul li button {
     border-radius: .5em .5em .5em .5em;
     box-shadow: 0px 2px 7px 0px black;
     border: none;
+        transition: 1s;
 }
 
-body ul li button.toegevoegd {
-    position: absolute;
-    width: 1.9em;
-    height: 1.9em;
-    left: 87%;
-    top: 77%;
-    padding-top: .1em;
-    text-align: center;
+body ul li.toegevoegd button {
     color: red;
-    background-color: var(--basisKleur);
-    font-size: 20px;
-    border-radius: .5em .5em .5em .5em;
-    box-shadow: 0px 2px 7px 0px black;
-    border: none;
-    display: block;
-    transition: 1s;
 }
 
 
@@ -566,7 +577,7 @@ body ul li button.toegevoegd {
 }
 
 /* Kruisje om pop-up scherm te sluiten */
-span {
+span.kruisje{
     position: absolute;
     right: .7em;
     top: .88em;
@@ -575,7 +586,7 @@ span {
     cursor: pointer;
 }
 
-span:hover {
+span.kruisje:hover{
     color: #5a31d6;
 }
 

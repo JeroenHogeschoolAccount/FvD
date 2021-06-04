@@ -127,22 +127,77 @@ var opgeslagenLijst = document.getElementById("list");
 var alleHartjeKnoppen = document.querySelectorAll("ul.list button.buttonHart");
 
 alleHartjeKnoppen.forEach(function (hartjeKnop) {
-    hartjeKnop.addEventListener("click", toevoegen);
+    hartjeKnop.addEventListener("click", toggleFavoriet);
 });
 
-function toevoegen(event) {
-    var itm = event.target.closest("li");
-    var cln = itm.cloneNode(true);
-    var clnButton = cln.querySelector("button");
-    console.log(clnButton);
-    clnButton.classList.add("toegevoegd");
-    opgeslagenLijst.appendChild(cln);
+function toggleFavoriet(event) {
+//    check of die foto favoriet is
+       var foto = event.target.closest("li");
+       if(foto.classList.contains("toegevoegd")) { 
+        favorietVerwijderen(foto);
+       } else {
+        favorietToevoegen(foto);
+       }
+//    als favoriet verwijderen
+//    als niet favoriet toevoegen
 }
 
+function favorietToevoegen(foto) {
+//    console.log(clnButton);
+//   foto opzoeken 
+//   class toevoegen aan de foto
+    foto.classList.add("toegevoegd");
+//   met css hartje rood maken
+//   foto clone
+        var fotoClone = foto.cloneNode(true);
+    var fotoCloneButton = fotoClone.querySelector("button");
+    fotoCloneButton.addEventListener("click", favorietVerwijderenInFavorietenlijst);
+//   clone toevoegen aan lijst met favorieten
+    opgeslagenLijst.appendChild(fotoClone);
+//    teller +1
+    var tellerKnop = document.querySelector("#opgeslagenKnop span");
+    var tellerTitel = document.querySelector("#vierkant h2 span");
+    var huidigeAantal = tellerKnop.textContent;
+    var nieuweAantal = parseInt(huidigeAantal) + 1;
+    tellerKnop.textContent = nieuweAantal;
+        tellerTitel.textContent = nieuweAantal;
+}
 
+function favorietVerwijderen (foto) {
+//    foto opzoeken 
+//    de class weghalen 
+        foto.classList.remove("toegevoegd");
+//    de foto opzoeken in de lijst met favorieten 
+    var fotoId = foto.dataset.id;
+    var fotoInFavorietenLijst = document.querySelector("ul.list2 li[data-id='"+fotoId+"']");
+//    foto weghalen uit de lijst
+    fotoInFavorietenLijst.remove();
+//    teller -1
+        var tellerKnop = document.querySelector("#opgeslagenKnop span");
+        var tellerTitel = document.querySelector("#vierkant h2 span");
+    var huidigeAantal = tellerKnop.textContent;
+    var nieuweAantal = parseInt(huidigeAantal) - 1;
+    tellerKnop.textContent = nieuweAantal;
+            tellerTitel.textContent = nieuweAantal;
+}
 
-
-
+function favorietVerwijderenInFavorietenlijst(event) {
+//    foto opzoeken
+         var fotoInFavorietenLijst = event.target.closest("li");
+//    class weg uit normale lijst 
+        var fotoId = fotoInFavorietenLijst.dataset.id;
+         var fotoInNormaleLijst = document.querySelector("ul.list li[data-id='"+fotoId+"']");
+    fotoInNormaleLijst.classList.remove("toegevoegd");
+//    foto weg uit favorietenlijst
+        fotoInFavorietenLijst.remove();
+//    teller -1
+        var tellerKnop = document.querySelector("#opgeslagenKnop span");
+        var tellerTitel = document.querySelector("#vierkant h2 span");
+    var huidigeAantal = tellerKnop.textContent;
+    var nieuweAantal = parseInt(huidigeAantal) - 1;
+    tellerKnop.textContent = nieuweAantal;
+            tellerTitel.textContent = nieuweAantal;
+}
 //
 //
 //
@@ -188,67 +243,6 @@ function animatie() {
 
 
 
-
-
-/* Bron: stukje JavaScript bekeken/gebruikt van Muhammet */
-var favorietKnop2 = document.querySelector(
-    ".list li:nth-child(2) .buttonHart"
-);
-
-favorietKnop2.addEventListener("click", favorietOpslaan2);
-
-function favorietOpslaan2() {
-    if (favorietKnop2.classList.contains("test")) {
-        favorietKnop2.classList.remove("test");
-        favorietKnop2.style.color = "red";
-        opgeslagenKnop.classList.add("jaa");
-
-    } else {
-        favorietKnop2.classList.add("test");
-        favorietKnop2.style.color = "white";
-        //            opgeslagenLijst.remove("itm");
-    }
-}
-
-
-
-var favorietKnop3 = document.querySelector(
-    ".list li:nth-child(3) .buttonHart"
-);
-
-favorietKnop3.addEventListener("click", favorietOpslaan3);
-
-function favorietOpslaan3() {
-    if (favorietKnop3.classList.contains("test")) {
-        favorietKnop3.classList.remove("test");
-        favorietKnop3.style.color = "red";
-        opgeslagenKnop.classList.add("jaa");
-
-    } else {
-        favorietKnop3.classList.add("test");
-        favorietKnop3.style.color = "white";
-    }
-}
-
-
-
-var favorietKnop4 = document.querySelector(
-    ".list li:nth-child(4) .buttonHart"
-);
-
-favorietKnop4.addEventListener("click", favorietOpslaan4);
-
-function favorietOpslaan4() {
-    if (favorietKnop4.classList.contains("test")) {
-        favorietKnop4.classList.remove("test");
-        favorietKnop4.style.color = "red";
-        opgeslagenKnop.classList.add("jaa");
-
-    } else {
-        favorietKnop4.classList.add("test");
-        favorietKnop4.style.color = "white";
-    }
-}
 
 
 
