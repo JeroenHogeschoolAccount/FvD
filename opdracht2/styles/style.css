@@ -10,7 +10,6 @@
 
 }
 
-
 /* ALGEMENE STYLING */
 *,
 *::after,
@@ -28,7 +27,11 @@
     --schaduw3: 0px 2px 2px 0px grey;
     --kleurFooter: #e0e0e0;
     --kleurFooterTekst: black;
+    --kleurBijnaZwart: #111;
+    --kleurHartjeInButton: grey;
+    --KleurHartjeButton: white;
 }
+
 
 @media (prefers-color-scheme:dark) {
     :root {
@@ -40,6 +43,8 @@
         --schaduw3: 0px 2px 2px 0px black;
         --kleurFooter: #5c5c5c;
         --kleurFooterTekst: white;
+        --kleurHartjeInButton: white;
+        --KleurHartjeButton: #333333;
     }
 }
 
@@ -50,11 +55,18 @@ a {
 
 body {
     font-family: eenfont, sans-serif;
-    color: #111;
     background-color: var(--kleurAchtergrondBody);
-    margin-bottom: 5em;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
+
+
+
+/* HEADER*/
 /* Logo */
 body header section:nth-of-type(1) {
     display: flex;
@@ -66,6 +78,10 @@ body header section:nth-of-type(1) {
     color: white;
 }
 
+
+
+
+/* MAIN */
 /* Section zoekbalk*/
 body main section:nth-of-type(1) {
     display: flex;
@@ -88,12 +104,9 @@ body main section:nth-of-type(1) input {
 /* Zoekbalk placeholder */
 /* Bron: https://www.w3schools.com/howto/howto_css_placeholder.asp */
 body main section:nth-of-type(1) input::placeholder {
-    padding-left: .7em;
+    padding-left: .1em;
 }
 
-body main section:nth-of-type(1) input {
-    padding-left: 1em;
-}
 
 
 /* Alle kleurtjes van filteren naast elkaar */
@@ -109,7 +122,6 @@ body main section aside input {
     -webkit-appearance: none;
     appearance: none;
 }
-
 
 /* Radio button 1 - oranje */
 body main section aside input:nth-of-type(1)::after {
@@ -129,7 +141,6 @@ body main section aside input:nth-of-type(1):checked::after {
     border-radius: 25%;
 }
 
-
 /* Radio button 2 - geel */
 body main section aside input:nth-of-type(2)::after {
     width: 2em;
@@ -147,7 +158,6 @@ body main section aside input:nth-of-type(2):checked::after {
     height: 2em;
     border-radius: 25%;
 }
-
 
 /* Radio button 3 - groen */
 body main section aside input:nth-of-type(3)::after {
@@ -167,7 +177,6 @@ body main section aside input:nth-of-type(3):checked::after {
     border-radius: 25%;
 }
 
-
 /* Radio button 4 - blauw */
 body main section aside input:nth-of-type(4)::after {
     width: 2em;
@@ -185,7 +194,6 @@ body main section aside input:nth-of-type(4):checked::after {
     height: 2em;
     border-radius: 25%;
 }
-
 
 /* Radio button 5 - paars */
 body main section aside input:nth-of-type(5)::after {
@@ -205,7 +213,6 @@ body main section aside input:nth-of-type(5):checked::after {
     border-radius: 25%;
 }
 
-
 /* Radio button 6 - rood */
 body main section aside input:nth-of-type(6)::after {
     width: 2em;
@@ -223,7 +230,6 @@ body main section aside input:nth-of-type(6):checked::after {
     height: 2em;
     border-radius: 25%;
 }
-
 
 /* Radio button 7 - zwart wit */
 body main section aside input:nth-of-type(7)::after {
@@ -246,7 +252,6 @@ body main section aside input:nth-of-type(7):checked::after {
     height: 2em;
     border-radius: 25%;
 }
-
 
 /* Radio button 8 - alle kleuren */
 body main section aside input:nth-of-type(8)::after {
@@ -282,333 +287,6 @@ body main section aside input:nth-of-type(8):checked::after {
     border-radius: 25%;
 }
 
-
-/* Lijst met afbeeldingen*/
-/* Bron hulp: https://www.youtube.com/watch?v=bam83Xv4VMA */
-.list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    margin-right: 1.4em;
-    margin-left: .2em;
-    grid-gap: 1em;
-}
-
-@media screen and (max-width: 374px) {
-    .list {
-        margin-right: 1.4em;
-        margin-left: -1.4em;
-    }
-}
-
-li {
-    list-style: none;
-    position: relative;
-    overflow: hidden;
-    padding: .2em;
-}
-
-img {
-    width: 100%;
-    border-radius: 1em;
-    box-shadow: var(--schaduw2);
-}
-
-/*
-.card {
-    position: relative;
-    transition: 1s;
-    overflow: hidden;
-}
-
-body ul .card p {
-    position: absolute;
-    width: 58%;
-    left: 20%;
-    top: -.5em;
-    margin: 0;
-    padding: .6em;
-    text-align: center;
-    color: white;
-    background-color: var(--basisKleur);
-    box-shadow: 0px 2px 7px 0px black;
-    border-radius: 0em 0em 1em 1em;
-}
-*/
-
-
-body ul p {
-    position: absolute;
-    width: 58%;
-    left: 20%;
-    top: -.6em;
-    margin: 0;
-    padding: .6em;
-    margin-top: .8em;
-    text-align: center;
-    color: white;
-    background-color: var(--basisKleur);
-    box-shadow: 0px 2px 7px 0px black;
-    border-radius: 0em 0em 1em 1em;
-}
-
-/* Footer */
-footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: .9em;
-    background-color: var(--kleurFooter);
-    text-align: center;
-    color: var(--kleurFooterTekst);
-    opacity: 100%;
-    font-family: Gloria Hallelujah, sans-serif;
-    font-size: 7.2px;
-}
-
-
-/* Section knoppen sorteren en opgeslagen */
-/* Bron hulp: https://stackoverflow.com/questions/37226787/align-content-not-working-on-flex-items/52621741 */
-#knoppen {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 2em;
-    margin-left: 2em;
-    margin-top: 1em;
-}
-
-/* Knop voor pop-up opgeslagen afbeedlingen - grijs */
-#opgeslagenKnop {
-    /*    width: 9em;*/
-    height: 2.5em;
-    border-radius: 1em;
-    box-shadow: var(--schaduw3);
-    border: none;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-}
-
-#opgeslagenKnop span {
-    display: inline-block;
-    position: relative;
-    width: 1em;
-    margin-left: .75em;
-    margin-right: .75em;
-    color: white;
-}
-
-#opgeslagenKnop span::before {
-    content: "❤";
-    position: absolute;
-    font-size: 2.5em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: red;
-    z-index: -1;
-}
-
-
-
-.jaa {
-    width: 9em;
-    height: 2.5em;
-    border-radius: 1em;
-    box-shadow: var(--schaduw3);
-    border: none;
-    background-color: grey;
-    animation: opgeslagenKnop 3s;
-    display: block;
-    animation-iteration-count: 1;
-}
-
-@keyframes opgeslagenKnop {
-    0% {
-        color: white;
-    }
-
-    50% {
-        color: white;
-        background-color: #6c3bff;
-    }
-
-    100% {
-        color: black;
-    }
-}
-
-
-
-
-/* Knop voor sorteren */
-.sort {
-    width: 9em;
-    height: 2.5em;
-    box-shadow: var(--schaduw3);
-    border: none;
-    background-color: white;
-    font-weight: bolder;
-}
-
-.sort:hover {
-    cursor: pointer;
-    background-color: #fafafa;
-}
-
-.sort:active {
-    box-shadow: inset 0px 1px 2px 0px grey;
-}
-
-.sort.asc,
-.sort.desc {
-    font-weight: bold;
-}
-
-.sort.asc::after {
-    content: "(A tot Z)";
-    padding-left: .20em;
-    font-weight: 100;
-    color: #6c3bff;
-}
-
-.sort.desc::after {
-    content: "(Z tot A)";
-    padding-left: .20em;
-    font-weight: 100;
-    color: #6c3bff;
-}
-
-
-/* Knop afbeelding opslaan - hartje */
-body ul li button {
-    position: absolute;
-    width: 1.9em;
-    height: 1.9em;
-    left: 87%;
-    top: 77%;
-    padding-top: .1em;
-    text-align: center;
-    color: white;
-    background-color: var(--basisKleur);
-    font-size: 20px;
-    border-radius: .5em .5em .5em .5em;
-    box-shadow: 0px 2px 7px 0px black;
-    border: none;
-    transition: 1s;
-}
-
-body ul li.toegevoegd button {
-    color: red;
-}
-
-
-
-
-/* TEST TEST TEST KNOP*/
-
-.buttonHart {
-    position: absolute;
-    width: 1.9em;
-    height: 1.9em;
-    left: 87%;
-    top: 77%;
-    padding-top: .1em;
-    text-align: center;
-    color: white;
-    background-color: var(--basisKleur);
-    font-size: 20px;
-    border-radius: .5em .5em .5em .5em;
-    box-shadow: 0px 2px 7px 0px black;
-    border: none;
-}
-
-.buttonHartToegevoegd {
-    position: absolute;
-    width: 1.9em;
-    height: 1.9em;
-    left: 87%;
-    top: 77%;
-    padding-top: .1em;
-    text-align: center;
-    color: red;
-    background-color: var(--basisKleur);
-    font-size: 20px;
-    border-radius: .5em .5em .5em .5em;
-    box-shadow: 0px 2px 7px 0px black;
-    border: none;
-    display: block;
-}
-
-
-/* Pop-up scherm opgeslagen */
-.vierkantvormgeving {
-    background-color: var(--basisKleurPopUp);
-    width: 100%;
-    position: relative;
-    display: none;
-    position: fixed;
-    left: 0;
-    top: -10em;
-    height: 100%;
-    overflow: auto;
-    margin-top: 8.3em;
-}
-
-.list2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    margin-right: 1.4em;
-    margin-left: .2em;
-    grid-gap: 1em;
-}
-
-
-@media screen and (max-width: 374px) {
-    .list2 {
-        margin-right: 1.4em;
-        margin-left: -1.92em;
-    }
-}
-
-/* Kruisje om pop-up scherm te sluiten */
-/*
-span.kruisje{
-    position: absolute;
-    right: .7em;
-    top: .88em;
-    color: #6c3bff;
-    font-size: 3em;
-    cursor: pointer;
-}
-
-span.kruisje:hover{
-    color: #5a31d6;
-}
-*/
-
-/* Titel pop-up scherm */
-h2 {
-    font-family: paytone one, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
-    padding-bottom: .5em;
-    font-size: 30px;
-}
-
-/* Voor JavaScript pop-up opgeslagen */
-.block {
-    display: block;
-}
-
-
-
 /* Filteren op kleur - nodig voor JavaScript */
 /* Bron: oefening les sorteren */
 ul.oranje li:not(.oranje) {
@@ -639,6 +317,62 @@ ul.zwartwit li:not(.zwartwit) {
     display: none;
 }
 
+
+
+
+/* Lijst met afbeeldingen */
+/* Bron hulp: https://www.youtube.com/watch?v=bam83Xv4VMA */
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    margin-right: 1.4em;
+    margin-left: .2em;
+    grid-gap: 1em;
+    margin-bottom: 4em;
+}
+
+/* Speciaal en enkel voor oude iphone 5 responsive */
+@media screen and (max-width: 374px) {
+    .list {
+        margin-right: 1.4em;
+        margin-left: -1.4em;
+    }
+}
+
+li {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    padding: .2em;
+}
+
+/* Alle afbeeldingen */
+img {
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: var(--schaduw2);
+}
+
+/* Enkel de afbeelding in de lijst*/
+main ul.list img {
+    cursor: pointer;
+}
+
+/* De titels van de afbeedlingen */
+body ul p {
+    position: absolute;
+    width: 58%;
+    left: 21%;
+    top: -.6em;
+    margin: 0;
+    padding: .6em;
+    margin-top: .8em;
+    text-align: center;
+    color: white;
+    background-color: var(--basisKleur);
+    box-shadow: 0px 2px 7px 0px black;
+    border-radius: 0em 0em 1em 1em;
+}
 
 /* Vormgeving van de lijst met afbeeldingen wanneer met een kleur is gefilterd */
 .oranje {
@@ -695,6 +429,7 @@ ul.zwartwit li:not(.zwartwit) {
     grid-gap: 1em;
     margin-right: .6em;
     margin-left: -.7em;
+    margin-bottom: 4em;
 }
 
 .geel {
@@ -708,38 +443,241 @@ ul.zwartwit li:not(.zwartwit) {
 
 
 
-/* Pop-up afbeelding groot*/
-/* Bron: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
+/* Section van de knoppen sorteren en opgeslagen */
+/* Bron hulp: https://stackoverflow.com/questions/37226787/align-content-not-working-on-flex-items/52621741 */
+#knoppen {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-top: 1em;
+}
 
-/*
-.gallery {
+
+
+/* Knop voor pop-up opgeslagen afbeeldingen */
+#opgeslagenKnop {
+    height: 2.5em;
+    border-radius: 1em;
+    box-shadow: var(--schaduw3);
+    border: none;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    padding-left: .8em;
+    font-weight: bolder;
+    padding-right: .8em
+}
+
+#opgeslagenKnop:active {
+    box-shadow: inset 0px 1px 4px 0px grey;
+}
+
+#opgeslagenKnop:hover {
+    background-color: #fafafa;
+    color: black;
+}
+
+/* cijfer in opgeslagen knop */
+#opgeslagenKnop span {
+    display: inline-block;
+    position: relative;
+    width: 1.2em;
+    margin-left: .75em;
+    margin-right: .75em;
+    color: white;
+}
+
+/* Opgeslagen knop before - het hartje */
+#opgeslagenKnop span::before {
+    content: "❤";
+    position: absolute;
+    font-size: 2.7em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff4336;
+    z-index: -1;
+    animation: hartje 2s infinite;
+}
+
+/* Animatie opgeslagen knop wanneer de eerste afbeelding wordt toegevoegd */
+.jaa {
+    background-color: var(--basisKleur);
+    animation: ja 2s;
+    display: block;
+    animation-iteration-count: 1;
+}
+
+@keyframes ja {
+    0% {
+        color: black;
+    }
+
+    20% {
+        color: white;
+    }
+
+    50% {
+        color: white;
+        background-color: #51b846;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+/* Animatie opgeslagen knop wanneer de eerste afbeelding wordt verwijderd */
+.nee {
+    background-color: var(--basisKleur);
+    animation: nee 2s;
+    display: block;
+    animation-iteration-count: 1;
+}
+
+@keyframes nee {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: white;
+        background-color: #ff5252;
+    }
+
+    100% {
+        color: black;
+    }
+}
+
+
+
+/* Knop voor sorteren */
+.sort {
+    width: 9em;
+    height: 2.5em;
+    box-shadow: var(--schaduw3);
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.sort:hover {
+    cursor: pointer;
+    background-color: #fafafa;
+}
+
+.sort:active {
+    box-shadow: inset 0px 1px 2px 0px grey;
+}
+
+/* Stukje code sorteer knop voor JavaScript van https://listjs.com */
+.sort.asc,
+.sort.desc {
+    font-weight: bold;
+}
+
+.sort.asc::after {
+    content: "(A tot Z)";
+    padding-left: .20em;
+    font-weight: 100;
+    color: #6c3bff;
+}
+
+.sort.desc::after {
+    content: "(Z tot A)";
+    padding-left: .20em;
+    font-weight: 100;
+    color: #6c3bff;
+}
+
+
+
+/* Knop hartje bij de afbeeldingen */
+.buttonHart {
+    position: absolute;
+    width: 2.2em;
+    height: 2.2em;
+    right: .8em;
+    bottom: 1em;
+    margin: 0;
+    padding: .6em;
+    margin-top: .8em;
+    text-align: center;
+    color: var(--kleurHartjeInButton);
+    background-color: var(--KleurHartjeButton);
+    box-shadow: 0px 2px 7px 0px black;
+    border-radius: .6em;
+    border: none;
+    transition: 1s;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Knop hartje wanneer bijbehorende afbeelding is toegevoegd aan de lijst met favorieten */
+body ul li.toegevoegd button {
+    color: red;
+}
+
+
+
+/* POP-UP SCHERMEN */
+/* Pop-up scherm opgeslagen/favorieten */
+.vierkantvormgeving {
+    background-color: var(--basisKleurPopUp);
+    width: 100%;
+    position: relative;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: -10em;
+    height: 100%;
+    overflow: auto;
+    margin-top: 8.3em;
+}
+
+/* De lijst waar de favorieten in komen te staan */
+.list2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     margin-right: 1.4em;
     margin-left: .2em;
     grid-gap: 1em;
 }
-*/
 
-.img-container {
-    overflow: hidden;
+/* Speciaal en enkel voor iPhone 5 responsive */
+@media screen and (max-width: 374px) {
+    .list2 {
+        margin-right: 1.4em;
+        margin-left: -1.42em;
+    }
 }
 
-/*
-.img-container img {
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-out;
+/* Titel pop-up scherm van lijst met favorieten */
+h2 {
+    font-family: paytone one, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: .5em;
+    font-size: 30px;
 }
-*/
 
-/*
-.img-container img:hover {
-    transform: scale(1.2);
-    border-radius: 20em;
+/* Voor JavaScript - pop-up opgeslagen, zodat popup in en uit beeld kan gaan */
+.block {
+    display: block;
 }
-*/
 
+
+
+/* Pop up scherm voor het vergoten van een afbeelding */
+/* Bron: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
 .modal {
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(35px);
@@ -751,7 +689,7 @@ ul.zwartwit li:not(.zwartwit) {
     opacity: 0;
     pointer-events: none;
     transition: 0.25s ease-out;
-    display:block;
+    display: block;
 }
 
 .modal.open {
@@ -759,6 +697,7 @@ ul.zwartwit li:not(.zwartwit) {
     pointer-events: all;
 }
 
+/* De grote afbeelding in de pop-up */
 .full-img {
     position: absolute;
     width: 80%;
@@ -774,91 +713,9 @@ ul.zwartwit li:not(.zwartwit) {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal p {
-    color: black;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-}
-
-.kruisjeNep {
-    position: absolute;
-    right: .7em;
-    top: .88em;
-    color: #5a31d6;
-    font-size: 3em;
-    pointer-events: none;
-}
 
 
-
-
-
-
-/* knop opslaan bij afbeelding */
-
-.buttonhart {
-    background-color: red;
-}
-
-
-
-
-
-
-
-
-
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
-}
-
-
-
-
-
-/* Pop-up afbeelding groot */
-/*
-.popupAfbeeldingGroot {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: white;
-    color: red;
-    z-index: 1;
-    overflow: auto;
-    display: none;
-}
-
-.popupAfbeeldingGrootContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    margin-left: 2em;
-    margin-right: 2em;
-}
-
-.popupAfbeeldingGrootFoto {
-    width: 100%;
-    max-width: 800px;
-}
-*/
-
-
-
-/* Kruisje pop-up scherm verwijderen */
+/* Kruisje pop-up schermen */
 .sluiten {
     position: absolute;
     opacity: 1;
@@ -867,7 +724,7 @@ body {
     font-size: 3em;
     cursor: pointer;
     right: .6em;
-    top: 1.4em;
+    top: 1em;
 }
 
 .sluiten:before,
@@ -875,10 +732,9 @@ body {
     position: absolute;
     content: '';
     height: .5em;
-    width:5px;
+    width: 5px;
     background-color: #6c3bff;
     border-radius: 2em;
-    
 }
 
 .sluiten:before {
@@ -887,4 +743,23 @@ body {
 
 .sluiten:after {
     transform: rotate(-45deg);
+}
+
+
+
+
+/* FOOTER */
+/* Footer */
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: .9em;
+    background-color: var(--kleurFooter);
+    text-align: center;
+    color: var(--kleurFooterTekst);
+    opacity: 100%;
+    font-family: Gloria Hallelujah, sans-serif;
+    font-size: 7.2px;
 }

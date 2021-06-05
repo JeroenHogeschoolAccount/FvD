@@ -7,6 +7,7 @@ var charactersList = new List('theList', options);
 
 
 
+
 /* ZOEKEN MET SORTEREN */
 charactersList.sort('afbeelding', {
     order: "asc"
@@ -14,11 +15,10 @@ charactersList.sort('afbeelding', {
 
 
 
+
 /* POP-UP SCHERM OPGESLAGEN */
 var vierkant = document.getElementById("vierkant");
-
 var button = document.getElementById("opgeslagenKnop");
-
 var kruisje = document.getElementsByClassName("sluiten")[0];
 
 
@@ -33,6 +33,7 @@ kruisje.addEventListener("click", weg);
 function weg() {
     vierkant.classList.remove("block");
 }
+
 
 
 
@@ -68,9 +69,10 @@ optionAlle.addEventListener("change", filteren);
 
 
 
-/* AFBEELDING TOEVOEGEN AAN OPGESLAGEN */
-var buttonToevoegen = document.getElementsByClassName("buttonHart");
-var lijstOpgeslagen = document.getElementsByClassName("list2");
+///* AFBEELDING TOEVOEGEN AAN OPGESLAGEN */
+//var buttonToevoegen = document.getElementsByClassName("buttonHart");
+//var lijstOpgeslagen = document.getElementsByClassName("list2");
+
 
 
 
@@ -79,7 +81,7 @@ var lijstOpgeslagen = document.getElementsByClassName("list2");
 var modal = document.querySelector(".modal");
 var previews = document.querySelectorAll(".list img");
 var original = document.querySelector(".full-img");
-//var imgText = document.querySelector(".caption");
+
 
 previews.forEach(preview => {
     preview.addEventListener('click', () => {
@@ -98,6 +100,7 @@ modal.addEventListener("click", (e) => {
 });
 
 
+/* POP UP SCHERM GROTE AFBEELDING SLUITEN MET KRUISJE */
 var sluit = document.querySelector(".modal button.sluiten");
 
 sluit.addEventListener("click", doeiGroteAfbeelding);
@@ -106,8 +109,6 @@ function doeiGroteAfbeelding() {
     modal.classList.remove("open");
     original.classList.remove("open");
 }
-
-
 
 
 /* POP-UP AFSLUITEN MET TOETS */
@@ -121,6 +122,9 @@ document.addEventListener('keydown', function (e) {
 });
 
 
+
+
+
 /* OPGESLAGEN LIJST OPENEN MET TOETS OMHOOG */
 document.addEventListener('keydown', function (e) {
     if (e.keyCode == 38) {
@@ -131,7 +135,9 @@ document.addEventListener('keydown', function (e) {
 
 
 
-/* AFBEELDING WORDT TOEGEVOEGD AAN LIJST MET FAVORIETEN*/
+
+/* AFBEELDING TOEGEVOEGEN EN VERWIJDEREN LIJST MET FAVORIETEN */
+/* Bron: docent Sanne */
 var deOpgeslagenLi = document.getElementById("testLi");
 //var hartjeKnop = document.getElementById("hartjeKnopTest");
 var opgeslagenLijst = document.getElementById("list");
@@ -154,13 +160,13 @@ function toggleFavoriet(event) {
 }
 
 function favorietToevoegen(foto) {
-    //    console.log(clnButton);
     //   foto opzoeken 
     //   class toevoegen aan de foto
     foto.classList.add("toegevoegd");
     //   met css hartje rood maken
     //   foto clone
     var fotoClone = foto.cloneNode(true);
+    var opgeslagenKnop = document.getElementById("opgeslagenKnop")
     var fotoCloneButton = fotoClone.querySelector("button");
     fotoCloneButton.addEventListener("click", favorietVerwijderenInFavorietenlijst);
     //   clone toevoegen aan lijst met favorieten
@@ -172,8 +178,10 @@ function favorietToevoegen(foto) {
     var nieuweAantal = parseInt(huidigeAantal) + 1;
     tellerKnop.textContent = nieuweAantal;
     tellerTitel.textContent = nieuweAantal;
+    opgeslagenKnop.classList.add("jaa");
 }
 
+/* FAVORIET VERWIJDEREN NORMALE LIJST */
 function favorietVerwijderen(foto) {
     //    foto opzoeken 
     //    de class weghalen 
@@ -190,8 +198,10 @@ function favorietVerwijderen(foto) {
     var nieuweAantal = parseInt(huidigeAantal) - 1;
     tellerKnop.textContent = nieuweAantal;
     tellerTitel.textContent = nieuweAantal;
+        opgeslagenKnop.classList.add("nee");
 }
 
+/* FAVORIET VERWIJDEREN POP-UP LIJST */
 function favorietVerwijderenInFavorietenlijst(event) {
     //    foto opzoeken
     var fotoInFavorietenLijst = event.target.closest("li");
@@ -209,44 +219,3 @@ function favorietVerwijderenInFavorietenlijst(event) {
     tellerKnop.textContent = nieuweAantal;
     tellerTitel.textContent = nieuweAantal;
 }
-//
-//
-//
-///* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie van gesprek  */
-//var hartjeKnop = document.getElementById("hartjeKnopTest");
-//opgeslagenKnop = document.getElementById("opgeslagenKnop")
-//
-//hartjeKnop.addEventListener("click", animatie);
-//
-//function animatie() {
-//    console.log(this)
-//    opgeslagenKnop.classList.add("jaa");
-//    this.classList.add("toegevoegd");
-//}
-
-
-
-/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie voor gesprek  */
-var hartjeKnop = document.getElementById("hartjeKnopTest");
-opgeslagenKnop = document.getElementById("opgeslagenKnop")
-
-hartjeKnop.addEventListener("click", animatie);
-
-function animatie() {
-    opgeslagenKnop.classList.add("jaa");
-    hartjeKnop.classList.add("toegevoegd");
-}
-
-
-/* Animatie van de opgeslagen knop en bewaar knop van de oranje rots - versie met class - werkt niet  */
-//
-//
-//var hartjeKnop = document.getElementsByClassName("buttonHart");
-//opgeslagenKnop = document.getElementById("opgeslagenKnop")
-//
-//hartjeKnop.addEventListener("click", rood);
-//
-//function rood() {
-//    opgeslagenKnop.classList.add("jaa");
-//    hartjeKnop.classList.add("buttonHartToegevoegd");
-//}
