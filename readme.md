@@ -120,7 +120,6 @@ Deze week aan de slag gegaan met JavaScript voor de functie van het toevoegen va
 ### Stand van zaken
 
 
-
 <img src="opdracht2/images/FrontendVoorDesigners29.png" width="700px" alt="omschrijving van de pagina">
 
 <img src="opdracht2/images/FrontendVoorDesigners30.png" width="700px" alt="omschrijving van de pagina">
