@@ -22,7 +22,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 10. Responsive website: https://www.youtube.com/watch?v=bam83Xv4VMA
 11. CSS flex-flow: https://stackoverflow.com/questions/37226787/align-content-not-working-on-flex-items/52621741
 12. Wat (e) doet in JavaScript: https://stackoverflow.com/questions/10323392/in-javascript-jquery-what-does-e-mean
-
+13. JavaScript met toetsenbord: https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery
+14. De code van een toets: https://keycode.info
 
 
 
@@ -112,3 +113,20 @@ Ik heb tot nu toe al veel geleerd van opdracht 2, want ik had hiervoor amper ken
 ### Stand van zaken
 
 Deze week aan de slag gegaan met JavaScript voor de functie van het toevoegen van afbeeldingen aan de lijst favorieten. Ik heb op internet veel voorbeelden bekeken, maar heb daar niet veel aan gehad. Of het voorbeeld was niet met nette JavaScript geschreven of het ging over het toevoegen van enkel tekst aan een lijst. Ik heb zelf ook veel geprobeerd met JavaScript, maar zonder succes.  Uiteindelijk bezig geweest met JavaScript voor andere onderdelen van de website - zoals het gebruik kunnen maken van het toetsenbord. Verder heb ik gewacht op dinsdag voor de hulp-les. Hier veel aan gehad, want nu werkt het toevoegen van een afbeelding aan de lijst. Hiermee kan ik weer verder aan de slag. Deze week is het de bedoeling om de opdracht af te krijgen - er moet zeker nog wel wat gebeuren. Zoals het overal rood worden van het hartje wanneer op deze knop is gedrukt. En natuurlijk ook weer het wit laten worden van het hartje wanneer de gebruiker een afbeelding van de lijst heeft gehaald. En dat laatste moet ook nog gemaakt worden: het kunnen verwijderen van afbeeldingen uit de lijst. Verder moet de microinteractie ook nog uitgebreid worden, zodat dit te zien is bij alle bewaar-knoppen. Op dit moment werkt het nog maar voor 1 knop. Als er nog tijd over is, wil ik ervoor zorgen dat de gebruiker op zijn/haar mobiel dubbel kan tikken op een afbeelding, waarna de afbeelding ook zal worden toegevoegd aan de lijst met favorieten. 
+
+
+## Voortgang 6 (week 9)
+
+### Stand van zaken
+
+
+
+<img src="opdracht2/images/FrontendVoorDesigners29.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners30.png" width="700px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners31.png" width="300px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners32.png" width="300px" alt="omschrijving van de pagina">
+
+<img src="opdracht2/images/FrontendVoorDesigners33.png" width="200px" alt="omschrijving van de pagina">
