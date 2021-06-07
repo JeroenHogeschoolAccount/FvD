@@ -30,6 +30,7 @@
     --kleurBijnaZwart: #111;
     --kleurHartjeInButton: grey;
     --KleurHartjeButton: white;
+    --kleurFocus: #b8ccff;
 }
 
 
@@ -763,3 +764,4 @@ footer {
     font-family: Gloria Hallelujah, sans-serif;
     font-size: 7.2px;
 }
+
