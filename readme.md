@@ -24,7 +24,10 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 12. Wat (e) doet in JavaScript: https://stackoverflow.com/questions/10323392/in-javascript-jquery-what-does-e-mean
 13. JavaScript met toetsenbord: https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery
 14. De code van een toets: https://keycode.info
-
+15. Filteren: https://codepen.io/shooft/pen/VwpvVYy
+16. Zoeken: https://codepen.io/shooft/pen/VwpvBeX
+17. Sorteren: https://codepen.io/shooft/pen/WNpQKar
+18. De afbeeldingen komen van Unsplash
 
 
 
@@ -119,6 +122,12 @@ Deze week aan de slag gegaan met JavaScript voor de functie van het toevoegen va
 
 ### Stand van zaken
 
+Deze week geprobeerd om ervoor te zorgen dat afbeeldingen ook weer kunnen worden verwijderd uit de lijst met favorieten. Echter kreeg ik dit niet voor elkaar. De gehele lijst werd verwijderd, terwijl het de bedoeling was dat enkel de desbetreffende afbeelding zou worden verwijderd. 
+Later in de week hiervoor hulp gekregen van de docent. Hierdoor werken nu de buttons met het hartje zoals bedoeld. Zowel het veranderen van de vormgeving na een klik als het verwijderen van een afbeelding uit de lijst. Ik vond dit moeilijker dan verwacht en was er zonder hulp denk ik niet uitgekomen. Het lastige aan JavaScript is ook wanneer je maar 1 klein foutje maakt het helemaal niet werkt. Hierdoor wist ik soms niet of ik echt een grote fout had gemaakt of dat ik er misschien wel al bijna was. Tijdens de hulples ben ik erachter gekomen dat het gebruik maken van de console erg handig is. Ook om sneller foutjes te ontdekken. 
+Ik heb van de docent ook geleerd hoe de micro-interactie werkt van het getal in het hartje, zodat de gebruiker kan zien hoeveel afbeeldingen hij/zij al heeft opgeslagen. Verder heb ik de kruisjes van de pop-up schermen veranderd. Dit waren voorheen geen buttons, waardoor deze niet toegankelijk waren met het toetsenbord. Als het goed is, kan nu de gehele site met het toetsenbord bestuurd worden. 
+Verder heb ik nog ervoor gezorgd dat de buttons met een hartje zich altijd op dezelfde plek bevinden - ongeacht hoe groot de afbeelding is. 
+Ik heb ook de code flink opgeruimd - op een gegeven moment iets teveel... Hierdoor werkte de site niet meer optimaal. Gelukkig ben ik er uiteindelijk wel achter gekomen wat het probleem was. 
+Als laatste nog wat aanpassingen aan de vormgeving, zoals gebruik maken van "active" etc. Ook nog een kleine micro-interactie toegevoegd wanneer de gebruiker de eerste keer een afbeelding toevoegt of verwijderd.
 
 <img src="opdracht2/images/FrontendVoorDesigners29.png" width="700px" alt="omschrijving van de pagina">
 

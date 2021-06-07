@@ -1,4 +1,5 @@
 /* ZOEKEN MET ZOEKBALK */
+/* Oefening uit de les van Sanne geraadpleegd */
 var options = {
     valueNames: ['afbeelding']
 };
@@ -9,6 +10,7 @@ var charactersList = new List('theList', options);
 
 
 /* ZOEKEN MET SORTEREN */
+/* Oefening uit de les van Sanne geraadpleegd */
 charactersList.sort('afbeelding', {
     order: "asc"
 });
@@ -38,6 +40,7 @@ function weg() {
 
 
 /* FILTEREN OP KLEUR */
+/* Oefening uit de les van Sanne geraadpleegd */
 var optionOranje = document.querySelector("#filter-oranje");
 var optionGeel = document.querySelector("#filter-geel");
 var optionGroen = document.querySelector("#filter-groen");
@@ -65,13 +68,6 @@ optionPaars.addEventListener("change", filteren);
 optionRood.addEventListener("change", filteren);
 optionZwartwit.addEventListener("change", filteren);
 optionAlle.addEventListener("change", filteren);
-
-
-
-
-///* AFBEELDING TOEVOEGEN AAN OPGESLAGEN */
-//var buttonToevoegen = document.getElementsByClassName("buttonHart");
-//var lijstOpgeslagen = document.getElementsByClassName("list2");
 
 
 
