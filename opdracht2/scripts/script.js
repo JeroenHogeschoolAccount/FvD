@@ -126,9 +126,9 @@ document.addEventListener('keydown', function (e) {
 
 
 
-/* OPGESLAGEN LIJST OPENEN MET TOETS OMHOOG */
+/* OPGESLAGEN LIJST OPENEN MET 0 */
 document.addEventListener('keydown', function (e) {
-    if (e.keyCode == 38) {
+    if (e.keyCode == 48) {
         vierkant.classList.add("block");
     }
 });
