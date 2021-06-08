@@ -1,9 +1,11 @@
 /* ZOEKEN MET ZOEKBALK */
 /* Oefening uit de les van Sanne geraadpleegd */
+/* Zoeken naar dezelfde woorden dat wordt ingetypt in de zoekbalk. Er wordt gezocht in P die de class afbeelding hebben */
 var options = {
     valueNames: ['afbeelding']
 };
 
+/* Initialiseren van zoeken en sorteren */
 var charactersList = new List('theList', options);
 
 
@@ -11,6 +13,8 @@ var charactersList = new List('theList', options);
 
 /* ZOEKEN MET SORTEREN */
 /* Oefening uit de les van Sanne geraadpleegd */
+/* Sorteren van p met de class afbeelding */
+/* De lijst sorteren op afbeelding naam van a naar z */
 charactersList.sort('afbeelding', {
     order: "asc"
 });
@@ -41,6 +45,7 @@ function weg() {
 
 /* FILTEREN OP KLEUR */
 /* Oefening uit de les van Sanne geraadpleegd */
+/* De verschillende radio buttons opzoeken en in een lade stoppen */
 var optionOranje = document.querySelector("#filter-oranje");
 var optionGeel = document.querySelector("#filter-geel");
 var optionGroen = document.querySelector("#filter-groen");
@@ -134,7 +139,6 @@ document.addEventListener('keydown', function (e) {
 
 /* AFBEELDING TOEGEVOEGEN EN VERWIJDEREN LIJST MET FAVORIETEN */
 /* Bron: docent Sanne */
-var deOpgeslagenLi = document.getElementById("testLi");
 //var hartjeKnop = document.getElementById("hartjeKnopTest");
 var opgeslagenLijst = document.getElementById("list");
 var alleHartjeKnoppen = document.querySelectorAll("ul.list button.buttonHart");
